@@ -3,23 +3,23 @@ import { siteDetails } from "./siteDetails";
 
 export const faqs: IFAQ[] = [
     {
-        question: `Is ${siteDetails.siteName} secure?`,
-        answer: 'Absolutely. We use bank-level encryption to protect your data and never store your login information. Plus, our biometric authentication adds an extra layer of security.',
+        question: `¿Realmente ${siteDetails.siteName} protege mi privacidad?`,
+        answer: 'Absolutamente. Nuestro diseño es "privacidad por defecto": cero recolección de datos personales, nunca compartimos información y todo se procesa localmente en tu dispositivo.',
     },
     {
-        question: `Can I use ${siteDetails.siteName} on multiple devices?`,
-        answer: 'Absolutely! Your Finwise account syncs seamlessly across all your devices - smartphone, tablet, and computer.',
+        question: `¿Cómo funciona la caja inteligente?`,
+        answer: 'La caja usa sensores discretos y algoritmos de psicología conductual para detectar patrones de impulso. Te ayuda a crear pausas conscientes sin juzgar tus decisiones.',
     },
     {
-        question: 'Can I connect all my bank accounts?',
-        answer: `Yes! ${siteDetails.siteName} supports connections with over 10,000 financial institutions worldwide. Simply log in through our secure portal to link your accounts.`
+        question: '¿Está respaldado por ciencia real?',
+        answer: `Sí. ${siteDetails.siteName} está validado en pilotos universitarios y cada función se basa en técnicas de psicología conductual con evidencia científica comprobada.`
     },
     {
-        question: 'Do I need any financial expertise to use the investing features?',
-        answer: 'Not at all! Our expert-curated portfolios and educational resources make investing accessible to everyone, regardless of experience level.',
+        question: '¿Tengo que dejar todo de golpe?',
+        answer: 'Para nada. HopeBox no impone abstinencia. Trabajamos en reducir gradualmente la frecuencia del impulso, respetando tu ritmo y sin presiones.',
     },
     {
-        question: 'What if I need help using the app?',
-        answer: 'Our dedicated support team is available 24/7 via chat or email. Plus, we offer extensive in-app tutorials and a comprehensive knowledge base to help you make the most of Finwise.'
+        question: '¿Qué pasa si necesito ayuda?',
+        answer: 'Nuestro equipo de soporte está disponible 24/7 y entiende la sensibilidad del tema. Ofrecemos guías claras y apoyo sin juicios para maximizar tu progreso.'
     }
 ];

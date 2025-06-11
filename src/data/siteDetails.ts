@@ -1,12 +1,12 @@
 export const siteDetails = {
-    siteName: 'Finwise',
-    siteUrl: 'https://finwise-omega.vercel.app/',
+    siteName: 'HopeBox',
+    siteUrl: 'https://hopebox.com/',
     metadata: {
-        title: 'Finwise - Next.js and Tailwind CSS Landing Page Template',
-        description: 'Finwise empowers businesses with cutting-edge technology solutions to drive success and efficiency.',
+        title: 'HopeBox - Transforma el impulso en autocontrol medible',
+        description: 'La primera caja inteligente con app, basada en ciencia conductual, para gestionar hábitos con total privacidad y sin juicios.',
     },
-    language: 'en-us',
-    locale: 'en-US',
-    siteLogo: `${process.env.BASE_PATH || ''}/images/logo.png`, // or use a string for the logo e.g. "TechStartup"
+    language: 'es-es',
+    locale: 'es-ES',
+    siteLogo: `${process.env.BASE_PATH || ''}/images/logo.png`, // or use a string for the logo e.g. "HopeBox"
     googleAnalyticsId: '', // e.g. G-XXXXXXX,
 }

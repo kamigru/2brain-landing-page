@@ -5,18 +5,18 @@ import { IStats } from "@/types";
 
 export const stats: IStats[] = [
     {
-        title: "20M+",
-        icon: <BsBarChartFill size={34} className="text-blue-500" />,
-        description: "Transactions processed securely every day, providing real-time insights."
+        title: "60%",
+        icon: <BsBarChartFill size={34} className="text-primary" />,
+        description: "De usuarios reducen la frecuencia del impulso en 30 días según validación científica."
     },
     {
-        title: "5.0",
-        icon: <BsFillStarFill size={34} className="text-yellow-500" />,
-        description: "Star rating, consistently maintained across app stores."
+        title: "100%",
+        icon: <BsFillStarFill size={34} className="text-secondary" />,
+        description: "Privacidad garantizada. Cero recolección de datos personales, siempre."
     },
     {
-        title: "200+ ",
-        icon: <PiGlobeFill size={34} className="text-green-600" />,
-        description: "Financial Institutions, seamlessly integrated, so you can manage all accounts."
+        title: "20%",
+        icon: <PiGlobeFill size={34} className="text-primary" />,
+        description: "De nuestros beneficios se destinan a investigación contra adicciones."
     }
 ];

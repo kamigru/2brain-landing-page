@@ -7,31 +7,31 @@ export const footerDetails: {
     telephone: string;
     socials: ISocials;
 } = {
-    subheading: "Empowering businesses with cutting-edge financial technology solutions.",
+    subheading: "Transformando el impulso en autocontrol medible mediante psicología basada en evidencia y privacidad absoluta.",
     quickLinks: [
         {
-            text: "Features",
+            text: "Características",
             url: "#features"
         },
         {
-            text: "Pricing",
-            url: "#pricing"
+            text: "Confianza",
+            url: "#confianza"
         },
         {
-            text: "Testimonials",
-            url: "#testimonials"
+            text: "Testimonios",
+            url: "#testimonios"
         }
     ],
-    email: 'address@yoursite.com',
-    telephone: '+1 (123) 456-7890',
+    email: 'contacto@hopebox.com',
+    telephone: '+34 (900) 123-456',
     socials: {
         // github: 'https://github.com',
         // x: 'https://twitter.com/x',
-        twitter: 'https://twitter.com/Twitter',
-        facebook: 'https://facebook.com',
+        twitter: 'https://twitter.com/HopeBoxOfficial',
+        facebook: 'https://facebook.com/HopeBoxOfficial',
         // youtube: 'https://youtube.com',
-        linkedin: 'https://www.linkedin.com',
+        linkedin: 'https://www.linkedin.com/company/hopebox',
         // threads: 'https://www.threads.net',
-        instagram: 'https://www.instagram.com',
+        instagram: 'https://www.instagram.com/hopeboxofficial',
     }
 }

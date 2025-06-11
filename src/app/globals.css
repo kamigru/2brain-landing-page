@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #F2F2F2;
   --foreground: #171717;
-  --primary: #FED835;
-  --secondary: #304fff;
+  --primary: #3DDC97;
+  --secondary: #5BA7E9;
 
-  --primary-accent: #e5c230;
+  --primary-accent: #6dbd9a;
   --foreground-accent: #454545;
-  --hero-background: #F3F3F5;
+  --hero-background: #FFFFFF;
 }
 
 html {
@@ -22,7 +22,7 @@ body {
   
   color: var(--foreground);
   background: var(--background);
-  font-family: "Source Sans 3", sans-serif;
+  font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
 }
@@ -33,21 +33,15 @@ body {
   }
 }
 
-.manrope {
-  font-family: "Manrope", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
-
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Manrope", sans-serif;
+  font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
 }
 
-#logos svg {
+/* #logos svg {
   @apply w-fit h-10 sm:h-12;
-}
+} */
 
 .benefit-section:last-of-type > div {
   @apply mb-10;

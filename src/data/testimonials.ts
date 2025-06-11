@@ -3,21 +3,21 @@ import { siteDetails } from "./siteDetails";
 
 export const testimonials: ITestimonial[] = [
     {
-        name: 'John Smith',
-        role: 'CEO at Company',
-        message: `${siteDetails.siteName}'s AI-driven insights have transformed how we approach financial planning for our clients. It's an invaluable resource in the modern financial landscape.`,
+        name: 'Usuario Anónimo',
+        role: 'Piloto Universitario',
+        message: `La primera herramienta que me ayudó a entender y regular mis impulsos sin sentirme juzgado y con privacidad total. En 30 días reduje significativamente la frecuencia.`,
         avatar: '/images/testimonial-1.webp',
     },
     {
-        name: 'Jane Doe',
-        role: 'CTO at Startup',
-        message: `As a CTO, I'm impressed by ${siteDetails.siteName}'s robust security measures and seamless integrations. It's rare to find an app that balances user-friendliness with such advanced technology.`,
+        name: 'Familiar de Usuario',
+        role: 'Cuidador',
+        message: `${siteDetails.siteName} nos permitió ayudar sin confrontar. La claridad de uso y el respeto absoluto a la privacidad nos dieron la tranquilidad que necesitábamos.`,
         avatar: '/images/testimonial-2.webp',
     },
     {
-        name: 'Emily Johnson',
-        role: 'Product Manager',
-        message: `${siteDetails.siteName} is revolutionizing personal finance management. Its intuitive design and powerful features make it an indispensable tool for anyone serious about financial growth.`,
+        name: 'Participante de Estudio',
+        role: 'Validación Científica',
+        message: `Por primera vez una herramienta me mostró progreso real y medible. No promesas vacías, sino datos claros sobre mi autocontrol día a día.`,
         avatar: '/images/testimonial-3.webp',
     },
 ];
