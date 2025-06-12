@@ -22,16 +22,16 @@ export const footerDetails: {
             url: "#testimonios"
         }
     ],
-    email: 'contacto@hopebox.com',
+    email: 'contacto@zenbox.com',
     telephone: '+34 (900) 123-456',
     socials: {
         // github: 'https://github.com',
         // x: 'https://twitter.com/x',
-        twitter: 'https://twitter.com/HopeBoxOfficial',
-        facebook: 'https://facebook.com/HopeBoxOfficial',
+        twitter: 'https://twitter.com/zenboxOfficial',
+        facebook: 'https://facebook.com/zenboxOfficial',
         // youtube: 'https://youtube.com',
-        linkedin: 'https://www.linkedin.com/company/hopebox',
+        linkedin: 'https://www.linkedin.com/company/zenbox',
         // threads: 'https://www.threads.net',
-        instagram: 'https://www.instagram.com/hopeboxofficial',
+        instagram: 'https://www.instagram.com/zenboxofficial',
     }
 }

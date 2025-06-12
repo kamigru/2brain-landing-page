@@ -1,12 +1,12 @@
 import React from 'react';
 
-interface HopeBoxButtonProps {
+interface zenboxButtonProps {
     text?: string;
     className?: string;
     onClick?: () => void;
 }
 
-const HopeBoxButton: React.FC<HopeBoxButtonProps> = ({ 
+const zenboxButton: React.FC<zenboxButtonProps> = ({ 
     text = "Empieza tu plan", 
     className = "",
     onClick 
@@ -31,4 +31,4 @@ const HopeBoxButton: React.FC<HopeBoxButtonProps> = ({
     );
 };
 
-export default HopeBoxButton; 
+export default zenboxButton; 

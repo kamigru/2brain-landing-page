@@ -1,6 +1,6 @@
 import { ctaDetails } from "@/data/cta"
 
-import HopeBoxButton from "./HopeBoxButton"
+import zenboxButton from "./zenboxButton"
 
 const CTA: React.FC = () => {
     return (
@@ -17,7 +17,7 @@ const CTA: React.FC = () => {
                         <p className="mx-auto max-w-xl md:px-5">{ctaDetails.subheading}</p>
 
                         <div className="mt-6 flex justify-center">
-                            <HopeBoxButton />
+                            <zenboxButton />
                         </div>
                     </div>
                 </div>

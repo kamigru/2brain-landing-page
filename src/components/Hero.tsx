@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-import HopeBoxButton from './HopeBoxButton';
+import zenboxButton from './zenboxButton';
 
 import { heroDetails } from '@/data/hero';
 
@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
                 <h1 className="text-4xl md:text-5xl md:leading-tight font-bold text-foreground max-w-lg md:max-w-2xl mx-auto whitespace-pre-line">{heroDetails.heading}</h1>
                 <p className="mt-4 text-foreground max-w-lg mx-auto">{heroDetails.subheading}</p>
                 <div className="mt-6 flex justify-center">
-                    <HopeBoxButton />
+                    <zenboxButton />
                 </div>
                 <Image
                     src={heroDetails.centerImageSrc}
@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
                     sizes="(max-width: 768px) 100vw, 384px"
                     priority={true}
                     unoptimized={true}
-                    alt="HopeBox - Caja inteligente para control de impulsos"
+                    alt="zenbox - Caja inteligente para control de impulsos"
                     className='relative mt-12 md:mt-16 mx-auto z-10'
                 />
             </div>

@@ -17,7 +17,7 @@ const FAQ: React.FC = () => {
                     <p className="lg:mt-10 text-foreground-accent text-center lg:text-left">
                         ¡Pregúntanos lo que necesites!
                     </p>
-                    <a href="mailto:contacto@hopebox.com" className="mt-3 block text-xl lg:text-4xl text-secondary font-semibold hover:underline text-center lg:text-left">contacto@hopebox.com</a>
+                    <a href="mailto:contacto@zenbox.com" className="mt-3 block text-xl lg:text-4xl text-secondary font-semibold hover:underline text-center lg:text-left">contacto@zenbox.com</a>
                 </div>
 
                 <div className="w-full lg:max-w-2xl mx-auto border-b">

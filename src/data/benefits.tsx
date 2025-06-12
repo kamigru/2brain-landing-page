@@ -5,7 +5,7 @@ import { IBenefit } from "@/types"
 export const benefits: IBenefit[] = [
     {
         title: "¿Cansado de soluciones que no funcionan?",
-        description: "Sabemos que has probado muchas 'soluciones milagro' que prometían resultados inmediatos. La realidad es que la mayoría genera más frustración que progreso real. HopeBox es diferente.",
+        description: "Sabemos que has probado muchas 'soluciones milagro' que prometían resultados inmediatos. La realidad es que la mayoría genera más frustración que progreso real. zenbox es diferente.",
         bullets: [
             {
                 title: "Sin Falsas Promesas",
@@ -26,7 +26,7 @@ export const benefits: IBenefit[] = [
         imageSrc: "/images/mockup-1.webp"
     },
     {
-        title: "Te presentamos HopeBox: Esperanza Responsable",
+        title: "Te presentamos zenbox: Esperanza Responsable",
         description: "La primera caja inteligente con app que transforma el impulso en autocontrol medible, usando psicología basada en evidencia y respetando tu privacidad absoluta.",
         bullets: [
             {
@@ -49,7 +49,7 @@ export const benefits: IBenefit[] = [
     },
     {
         title: "Diseñado para tu tranquilidad",
-        description: "HopeBox está pensado tanto para ti como para quienes te rodean. Una herramienta que ayuda sin confrontar, que apoya sin juzgar.",
+        description: "zenbox está pensado tanto para ti como para quienes te rodean. Una herramienta que ayuda sin confrontar, que apoya sin juzgar.",
         bullets: [
             {
                 title: "Feedback Constructivo",

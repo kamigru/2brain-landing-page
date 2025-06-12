@@ -16,7 +16,7 @@ export const faqs: IFAQ[] = [
     },
     {
         question: '¿Tengo que dejar todo de golpe?',
-        answer: 'Para nada. HopeBox no impone abstinencia. Trabajamos en reducir gradualmente la frecuencia del impulso, respetando tu ritmo y sin presiones.',
+        answer: 'Para nada. zenbox no impone abstinencia. Trabajamos en reducir gradualmente la frecuencia del impulso, respetando tu ritmo y sin presiones.',
     },
     {
         question: '¿Qué pasa si necesito ayuda?',
