@@ -1,7 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 
-import zenboxButton from './zenboxButton';
+import AppStoreButton from './AppStoreButton';
+import PlayStoreButton from './PlayStoreButton';
 
 import { heroDetails } from '@/data/hero';
 
@@ -23,8 +24,9 @@ const Hero: React.FC = () => {
             <div className="text-center pt-16 md:pt-20">
                 <h1 className="text-4xl md:text-5xl md:leading-tight font-bold text-foreground max-w-lg md:max-w-2xl mx-auto whitespace-pre-line">{heroDetails.heading}</h1>
                 <p className="mt-4 text-foreground max-w-lg mx-auto">{heroDetails.subheading}</p>
-                <div className="mt-6 flex justify-center">
-                    <zenboxButton />
+                <div className="mt-6 flex flex-col sm:flex-row gap-4 items-center justify-center">
+                    <AppStoreButton dark={true} />
+                    <PlayStoreButton dark={true} />
                 </div>
                 <Image
                     src={heroDetails.centerImageSrc}

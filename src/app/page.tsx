@@ -26,7 +26,7 @@ const HomePage: React.FC = () => {
             description="Validado en pilotos universitarios y respaldado por ciencia conductual."
           >
             <Confianza />
-            <div className="mt-16">
+            <div className="mt-16 pt-18">
               <Stats />
             </div>
           </Section>

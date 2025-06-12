@@ -31,15 +31,19 @@ const Header: React.FC = () => {
     return (
         <header className="bg-transparent sticky top-0 left-0 right-0 z-50 w-full flex justify-center">
             <Container className="!px-0">
-                <nav className={`mx-auto flex justify-between items-center py-2 px-5 md:py-6 transition-all duration-300 ${
+                <nav className={`mx-auto flex justify-between items-center transition-all duration-300 ${
                     isScrolled 
-                        ? 'bg-white/20 backdrop-blur-lg shadow-lg rounded-2xl mx-4 mt-4 border border-white/30' 
-                        : 'shadow-none bg-transparent'
+                        ? 'bg-white/20 backdrop-blur-lg shadow-lg rounded-2xl mx-4 mt-4 border border-white/30 py-2 px-4 md:py-4' 
+                        : 'shadow-none bg-transparent py-2 px-5 md:py-6'
                 }`}>
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-2">
-                        <FaBox className="text-foreground min-w-fit w-7 h-7" />
-                        <span className="text-xl font-semibold text-foreground cursor-pointer">
+                        <FaBox className={`text-foreground min-w-fit transition-all duration-300 ${
+                            isScrolled ? 'w-6 h-6' : 'w-7 h-7'
+                        }`} />
+                        <span className={`font-semibold text-foreground cursor-pointer transition-all duration-300 ${
+                            isScrolled ? 'text-xl' : 'text-xl'
+                        }`}>
                             {siteDetails.siteName}
                         </span>
                     </Link>
@@ -47,13 +51,17 @@ const Header: React.FC = () => {
                     <ul className="hidden md:flex space-x-6">
                         {menuItems.map(item => (
                             <li key={item.text}>
-                                <Link href={item.url} className="text-foreground hover:text-foreground-accent transition-colors">
+                                <Link href={item.url} className={`text-foreground hover:text-foreground-accent transition-all duration-300 ${
+                                    isScrolled ? 'text-base' : 'text-base'
+                                }`}>
                                     {item.text}
                                 </Link>
                             </li>
                         ))}
                         <li>
-                            <Link href="#cta" className="text-white bg-primary hover:bg-primary-accent px-8 py-3 rounded-full transition-colors font-semibold">
+                            <Link href="#cta" className={`text-white bg-primary hover:bg-primary-accent rounded-full transition-all duration-300 font-semibold ${
+                                isScrolled ? 'px-7 py-2.5 text-base' : 'px-8 py-3 text-base'
+                            }`}>
                                 Empieza tu plan
                             </Link>
                         </li>
