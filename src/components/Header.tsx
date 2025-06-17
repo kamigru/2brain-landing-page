@@ -59,7 +59,7 @@ const Header: React.FC = () => {
                             </li>
                         ))}
                         <li>
-                            <Link href="#cta" className={`text-white bg-primary hover:bg-primary-accent rounded-full transition-all duration-300 font-semibold ${
+                            <Link href="#cta" className={`text-white bg-primary hover:bg-primary-hover rounded-full transition-all duration-300 font-semibold ${
                                 isScrolled ? 'px-7 py-2.5 text-base' : 'px-8 py-3 text-base'
                             }`}>
                                 Empieza tu plan
@@ -105,7 +105,7 @@ const Header: React.FC = () => {
                             </li>
                         ))}
                         <li>
-                            <Link href="#cta" className="text-white bg-primary hover:bg-primary-accent px-5 py-2 rounded-full block w-fit font-semibold" onClick={toggleMenu}>
+                            <Link href="#cta" className="text-white bg-primary hover:bg-primary-hover px-5 py-2 rounded-full block w-fit font-semibold" onClick={toggleMenu}>
                                 Empieza tu plan
                             </Link>
                         </li>

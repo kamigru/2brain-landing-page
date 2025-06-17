@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { GoogleAnalytics } from '@next/third-parties/google';
-import { Inter } from "next/font/google";
+import { Inter, DM_Sans } from "next/font/google";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -12,6 +12,13 @@ const inter = Inter({
   subsets: ['latin'],
   weight: ['400', '700'],
   display: 'swap',
+});
+
+const dmSans = DM_Sans({ 
+  subsets: ['latin'],
+  weight: ['400', '500', '700', '900'],
+  display: 'swap',
+  variable: '--font-dm-sans',
 });
 
 export const metadata: Metadata = {
@@ -47,7 +54,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${inter.className} antialiased`}
+        className={`${inter.className} ${dmSans.variable} antialiased`}
       >
         {siteDetails.googleAnalyticsId && <GoogleAnalytics gaId={siteDetails.googleAnalyticsId} />}
         <Header />

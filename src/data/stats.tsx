@@ -6,7 +6,7 @@ import { IStats } from "@/types";
 export const stats: IStats[] = [
     {
         title: "60%",
-        icon: <BsBarChartFill size={34} className="text-primary" />,
+        icon: <BsBarChartFill size={34} className="text-secondary" />,
         description: "De usuarios reducen la frecuencia del impulso en 30 días según validación científica."
     },
     {
@@ -16,7 +16,7 @@ export const stats: IStats[] = [
     },
     {
         title: "20%",
-        icon: <PiGlobeFill size={34} className="text-primary" />,
+        icon: <PiGlobeFill size={34} className="text-secondary" />,
         description: "De nuestros beneficios se destinan a investigación contra adicciones."
     }
 ];

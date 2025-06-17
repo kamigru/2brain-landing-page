@@ -10,7 +10,7 @@ export const confianzaItems: IConfianza[] = [
     {
         title: "Validado Científicamente",
         description: "Respaldado por pilotos universitarios y técnicas de psicología conductual con evidencia comprobada.",
-        icon: <FiAward size={32} className="text-primary" />
+        icon: <FiAward size={32} className="text-secondary" />
     },
     {
         title: "Compromiso Social",
@@ -20,6 +20,6 @@ export const confianzaItems: IConfianza[] = [
     {
         title: "Certificación ISO 27001",
         description: "Privacidad absoluta certificada. Cero recolección de datos personales, siempre.",
-        icon: <FiShield size={32} className="text-primary" />
+        icon: <FiShield size={32} className="text-secondary" />
     }
 ]; 

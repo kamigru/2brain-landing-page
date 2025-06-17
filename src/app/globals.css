@@ -3,14 +3,22 @@
 @tailwind utilities;
 
 :root {
-  --background: #F2F2F2;
-  --foreground: #171717;
-  --primary: #3DDC97;
-  --secondary: #5BA7E9;
+  /* Nueva paleta de colores - Variables de compatibilidad */
+  --background: #e2c9d5;           /* surface.DEFAULT */
+  --foreground: #275a58;          /* text.primary */
+  --primary: #30938b;             /* primary.DEFAULT */
+  --secondary: #e2c9d5;           /* secondary.DEFAULT */
 
-  --primary-accent: #6dbd9a;
-  --foreground-accent: #454545;
-  --hero-background: #FFFFFF;
+  --primary-accent: #25746d;      /* primary.hover */
+  --foreground-accent: #c5b8ba;   /* text.secondary */
+  --surface-primary: #ffffff;     /* surface.DEFAULT */
+  
+  --text-default: #000000;        /* Títulos principales, texto más importante */
+  --text-secondary: #c18ba5;      /* Texto de apoyo, menos importante */
+  --text-secondary-accent: #a6597e; 
+  --text-accent: #30938b;         /* Enlaces, elementos interactivos */
+  --text-emphasis: #275a58;       /* Elementos que necesitan destacar */
+  --text-inverse: #ffffff;        /* Texto sobre fondos oscuros */
 }
 
 html {
@@ -18,13 +26,14 @@ html {
 }
 
 body {
-  @apply text-lg;
+  @apply text-lg leading-relaxed;
   
-  color: var(--foreground);
+  color: var(--text-primary);
   background: var(--background);
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  line-height: 1.7;
 }
 
 @layer utilities {
@@ -33,10 +42,251 @@ body {
   }
 }
 
+/* Animaciones personalizadas */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes testimonialSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0px);
+  }
+}
+
+@keyframes dotAppear {
+  from {
+    opacity: 0;
+    transform: scale(0) rotate(180deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes gentleFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Tipografía optimizada con jerarquía clara */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+  font-family: var(--font-dm-sans) "DM Sans", sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+h1 {
+  @apply text-4xl md:text-5xl lg:text-6xl;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: var(--text-emphasis); /* Títulos principales - Verde oscuro */
+}
+
+h2 {
+  @apply text-3xl md:text-4xl lg:text-5xl;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: var(--text-primary); /* Subtítulos importantes - Verde oscuro */
+}
+
+h3 {
+  @apply text-2xl md:text-3xl lg:text-4xl;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-accent); /* Títulos de sección - Verde teal */
+}
+
+h4 {
+  @apply text-xl md:text-2xl lg:text-3xl;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--text-accent); /* Títulos de tarjetas - Verde teal */
+}
+
+h5 {
+  @apply text-lg md:text-xl lg:text-2xl;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text-primary); /* Subtítulos menores - Verde oscuro */
+}
+
+h6 {
+  @apply text-base md:text-lg lg:text-xl;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  color: var(--text-secondary); /* Texto de apoyo - Gris malva */
+}
+
+/* Estilos de párrafo con jerarquía */
+p {
+  line-height: 1.7;
+  color: var(--text-primary);
+}
+
+p.lead {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+p.secondary {
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+p.emphasis {
+  color: var(--text-emphasis);
+  font-weight: 600;
+}
+
+/* Texto sobre fondos oscuros */
+.text-on-dark {
+  color: var(--text-inverse);
+}
+
+.text-on-dark h1,
+.text-on-dark h2,
+.text-on-dark h3,
+.text-on-dark h4,
+.text-on-dark h5,
+.text-on-dark h6 {
+  color: var(--text-inverse);
+}
+
+/* Estilos de utilidad para la nueva paleta */
+@layer utilities {
+  /* Colores de texto con jerarquía clara */
+  .text-primary {
+    color: var(--text-primary); /* Verde oscuro - Más importante */
+  }
+  
+  .text-secondary {
+    color: var(--text-secondary); /* Gris malva - Menos importante */
+  }
+
+  .text-secondary-accent {
+    color: var(--text-secondary-accent); /* Gris malva - Menos importante */
+  }
+  
+  .text-accent {
+    color: var(--text-accent); /* Verde teal - Interactivo */
+  }
+  
+  .text-emphasis {
+    color: var(--text-emphasis); /* Rosa brillante - Destacar */
+  }
+  
+  /* Fondos */
+  .bg-surface {
+    background-color: var(--surface-primary);
+  }
+  
+  .bg-surface-secondary {
+    background-color: var(--surface-secondary);
+  }
+  
+  .bg-surface-accent {
+    background-color: var(--surface-accent);
+  }
+  
+  /* Utilidades de tipografía semánticas */
+  .text-readable {
+    line-height: 1.7;
+    color: var(--text-primary);
+  }
+  
+  .text-readable-secondary {
+    line-height: 1.6;
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+  
+  .text-interactive {
+    color: var(--text-accent);
+    font-weight: 600;
+  }
+  
+  .text-highlight {
+    color: var(--text-emphasis);
+    font-weight: 600;
+  }
+  
+  /* Efectos glass */
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  
+  .glass-effect-dark {
+    background: rgba(39, 90, 88, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(126, 171, 166, 0.18);
+  }
+  
+  /* Animaciones */
+  .animate-float {
+    animation: gentleFloat 3s ease-in-out infinite;
+  }
+  
+  .animate-shimmer {
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+
+  /* Estilos para testimonios */
+  .testimonial-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+  }
+
+  .testimonial-card:hover {
+    transform: translateY(-2px);
+  }
 }
 
 /* #logos svg {

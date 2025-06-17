@@ -4,15 +4,24 @@ interface Props {
     id: string;
     title: string;
     description: string;
+    className?: string;
 }
 
-const Section: React.FC<React.PropsWithChildren<Props>> = ({ id, title, description, children }: React.PropsWithChildren<Props>) => {
+const Section: React.FC<React.PropsWithChildren<Props>> = ({ 
+    id, 
+    title, 
+    description, 
+    children, 
+    className = "" 
+}: React.PropsWithChildren<Props>) => {
     return (
-        <section id={id} className="py-10 lg:py-40">
+        <section id={id} className={`py-10 lg:py-40 ${className}`}>
             <SectionTitle>
-                <h2 className="text-center mb-4">{title}</h2>
+                <h2 className="text-center mb-4 text-balance">{title}</h2>
             </SectionTitle>
-            <p className="mb-12 text-center">{description}</p>
+            <p className="mb-12 text-center text-readable-secondary max-w-2xl mx-auto text-balance">
+                {description}
+            </p>
             {children}
         </section>
     )

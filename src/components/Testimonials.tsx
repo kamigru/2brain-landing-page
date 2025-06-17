@@ -8,22 +8,30 @@ const Testimonials: React.FC = () => {
             {testimonials.map((testimonial, index) => (
                 <div
                     key={index}
-                    className=""
+                    className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-white/15 relative"
                 >
-                    <div className="flex items-center mb-4 w-full justify-center lg:justify-start">
-                        <Image
-                            src={testimonial.avatar}
-                            alt={`${testimonial.name} avatar`}
-                            width={50}
-                            height={50}
-                            className="rounded-full shadow-md"
-                        />
-                        <div className="ml-4">
-                            <h3 className="text-lg font-semibold text-secondary">{testimonial.name}</h3>
-                            <p className="text-sm text-foreground-accent">{testimonial.role}</p>
+                    {/* Comillas decorativas */}
+                    <div className="absolute top-4 left-4 text-3xl text-white/40 font-serif leading-none">
+                        &ldquo;
+                    </div>
+                    
+                    <div className="pt-8">
+                        <p className="text-white/90 text-center lg:text-left leading-relaxed mb-6">{testimonial.message}</p>
+                        
+                        <div className="flex items-center justify-center lg:justify-start">
+                            <Image
+                                src={testimonial.avatar}
+                                alt={`${testimonial.name} avatar`}
+                                width={45}
+                                height={45}
+                                className="rounded-full shadow-md border-2 border-white/30"
+                            />
+                            <div className="ml-4">
+                                <h3 className="text-lg font-semibold text-white">{testimonial.name}</h3>
+                                <p className="text-sm text-white/70">{testimonial.role}</p>
+                            </div>
                         </div>
                     </div>
-                    <p className="text-foreground-accent text-center lg:text-left">&quot;{testimonial.message}&quot;</p>
                 </div>
             ))}
         </div>

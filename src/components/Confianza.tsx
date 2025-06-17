@@ -5,14 +5,14 @@ const Confianza: React.FC = () => {
     return (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-20">
             {confianzaItems.map((item, index) => (
-                <div key={index} className="text-center p-6 bg-white rounded-xl shadow-md border border-gray-100">
-                    <div className="flex justify-center mb-4">
+                <div key={index} className="text-center p-8 bg-surface rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-border-light/50">
+                    <div className="flex justify-center mb-6">
                         {item.icon}
                     </div>
-                    <h3 className="text-xl font-bold text-foreground mb-3">
+                    <h4 className="text-xl font-bold mb-4">
                         {item.title}
-                    </h3>
-                    <p className="text-foreground-accent leading-relaxed text-base">
+                    </h4>
+                    <p className="text-emphasis leading-relaxed">
                         {item.description}
                     </p>
                 </div>

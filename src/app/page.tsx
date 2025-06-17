@@ -14,12 +14,9 @@ const HomePage: React.FC = () => {
     <>
       <Hero />
       {/* <Logos /> */}
-      <div className="bg-hero-background relative z-20 pb-0">
+      <div className="bg-surface relative z-20 pb-0">
         <Container>
-          {/* Sección de características principales */}
           <Benefits />
-
-          {/* Sección de confianza y estadísticas */}
           <Section
             id="confianza"
             title="Confianza basada en hechos"
@@ -30,16 +27,27 @@ const HomePage: React.FC = () => {
               <Stats />
             </div>
           </Section>
+        </Container>
 
-          {/* Sección de testimonios */}
-          <Section
-            id="testimonios"
-            title="Historias de autocontrol"
-            description="Experiencias auténticas de quienes han transformado sus impulsos."
-          >
-            <Testimonials />
-          </Section>
+        {/* Sección de testimonios con fondo rosáceo */}
+        <div className="relative mt-10 lg:mt-16 lg:px-8 mx-4 lg:mx-12">
+          <div className="rounded-3xl opacity-95 absolute inset-0 -z-10 w-full" style={{ backgroundColor: 'var(--background)' }}>
+            <div className="rounded-3xl absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_600px_at_50%_500px,#30938b,transparent)]"></div>
+            <div className="rounded-3xl absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/5"></div>
+          </div>
+          <Container>
+            <Section
+              id="testimonios"
+              title="Historias de autocontrol"
+              description="Experiencias auténticas de quienes han transformado sus impulsos."
+              className="text-on-dark py-8 lg:py-12"
+            >
+              <Testimonials />
+            </Section>
+          </Container>
+        </div>
 
+        <Container>
           {/* Preguntas frecuentes */}
           <FAQ />
           
