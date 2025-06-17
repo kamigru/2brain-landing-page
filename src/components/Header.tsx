@@ -51,9 +51,9 @@ const Header: React.FC = () => {
                     <ul className="hidden md:flex space-x-6">
                         {menuItems.map(item => (
                             <li key={item.text}>
-                                <Link href={item.url} className={`text-foreground hover:text-foreground-accent transition-all duration-300 ${
+                                <Link href={item.url} className={`font-bold hover:scale-105 transition-all duration-300 ${
                                     isScrolled ? 'text-base' : 'text-base'
-                                }`}>
+                                }`} style={{ color: 'var(--primary)' }} onMouseEnter={(e) => e.currentTarget.style.color = 'var(--primary-accent)'} onMouseLeave={(e) => e.currentTarget.style.color = 'var(--primary)'}>
                                     {item.text}
                                 </Link>
                             </li>
@@ -76,9 +76,9 @@ const Header: React.FC = () => {
                             aria-expanded={isOpen}
                         >
                             {isOpen ? (
-                                <HiOutlineXMark className="h-6 w-6" aria-hidden="true" />
+                                <HiOutlineXMark className="h-6 w-6" aria-hidden="true" style={{ color: '#ffffff' }} />
                             ) : (
-                                <HiBars3 className="h-6 w-6" aria-hidden="true" />
+                                <HiBars3 className="h-6 w-6" aria-hidden="true" style={{ color: '#ffffff' }} />
                             )}
                             <span className="sr-only">Toggle navigation</span>
                         </button>
@@ -99,7 +99,7 @@ const Header: React.FC = () => {
                     <ul className="flex flex-col space-y-4 pt-1 pb-6 px-6">
                         {menuItems.map(item => (
                             <li key={item.text}>
-                                <Link href={item.url} className="text-foreground hover:text-primary block" onClick={toggleMenu}>
+                                <Link href={item.url} className="font-bold hover:scale-105 transition-all duration-300 block" style={{ color: 'var(--primary)' }} onMouseEnter={(e) => e.currentTarget.style.color = 'var(--primary-accent)'} onMouseLeave={(e) => e.currentTarget.style.color = 'var(--primary)'} onClick={toggleMenu}>
                                     {item.text}
                                 </Link>
                             </li>

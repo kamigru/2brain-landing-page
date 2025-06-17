@@ -10,15 +10,19 @@ const Testimonials: React.FC = () => {
                     key={index}
                     className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-white/15 relative"
                 >
-                    {/* Comillas decorativas */}
+                    {/* Comillas decorativas de apertura */}
                     <div className="absolute top-4 left-4 text-3xl text-white/40 font-serif leading-none">
                         &ldquo;
                     </div>
                     
+                    {/* Comillas decorativas de cierre */}
+                    <div className="absolute bottom-4 right-4 text-3xl text-white/40 font-serif leading-none">
+                        &rdquo;
+                    </div>
+                    
                     <div className="pt-8">
-                        <p className="text-white/90 text-center lg:text-left leading-relaxed mb-6">{testimonial.message}</p>
-                        
-                        <div className="flex items-center justify-center lg:justify-start">
+                        {/* Información del autor arriba */}
+                        <div className="flex items-center justify-center lg:justify-start mb-6">
                             <Image
                                 src={testimonial.avatar}
                                 alt={`${testimonial.name} avatar`}
@@ -31,6 +35,9 @@ const Testimonials: React.FC = () => {
                                 <p className="text-sm text-white/70">{testimonial.role}</p>
                             </div>
                         </div>
+                        
+                        {/* Mensaje del testimonio abajo */}
+                        <p className="text-white/90 text-center lg:text-left leading-relaxed">{testimonial.message}</p>
                     </div>
                 </div>
             ))}

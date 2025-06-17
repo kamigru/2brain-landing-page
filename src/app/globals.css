@@ -8,6 +8,7 @@
   --foreground: #275a58;          /* text.primary */
   --primary: #30938b;             /* primary.DEFAULT */
   --secondary: #e2c9d5;           /* secondary.DEFAULT */
+  --accent: #a6597e;             /* accent.DEFAULT */
 
   --primary-accent: #25746d;      /* primary.hover */
   --foreground-accent: #c5b8ba;   /* text.secondary */
@@ -15,7 +16,6 @@
   
   --text-default: #000000;        /* Títulos principales, texto más importante */
   --text-secondary: #c18ba5;      /* Texto de apoyo, menos importante */
-  --text-secondary-accent: #a6597e; 
   --text-accent: #30938b;         /* Enlaces, elementos interactivos */
   --text-emphasis: #275a58;       /* Elementos que necesitan destacar */
   --text-inverse: #ffffff;        /* Texto sobre fondos oscuros */
@@ -206,7 +206,7 @@ p.emphasis {
   }
 
   .text-secondary-accent {
-    color: var(--text-secondary-accent); /* Gris malva - Menos importante */
+    color: var(--accent); /* Gris malva - Menos importante */
   }
   
   .text-accent {
