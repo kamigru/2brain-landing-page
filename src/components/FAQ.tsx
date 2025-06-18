@@ -10,8 +10,8 @@ const FAQ: React.FC = () => {
         <section id="faq" className="py-10 lg:py-20" style={{ scrollMarginTop: '8rem' }}>
             <div className="flex flex-col lg:flex-row gap-10">
                 <div className="">
-                    <SectionTitle>
-                        <h2 className="my-3 !leading-snug lg:max-w-sm text-center lg:text-left text-emphasis">Preguntas Frecuentes</h2>
+                    <SectionTitle style={{ color: 'var(--primary)' }}>
+                        <h2 className="my-3 !leading-snug lg:max-w-sm text-center lg:text-left">Preguntas Frecuentes</h2>
                     </SectionTitle>
                     <p className="lg:mt-10 text-accent text-center lg:text-left">
                         ¡Pregúntanos lo que necesites!
@@ -27,7 +27,7 @@ const FAQ: React.FC = () => {
                                     <>
                                         <DisclosureButton className="flex items-center justify-between w-full px-4 pt-7 text-lg text-left border-t">
                                             <span className="text-2xl font-semibold text-emphasis">{faq.question}</span>
-                                            {open ? <BiMinus className="w-5 h-5 text-secondary" /> : <BiPlus className="w-5 h-5 text-secondary" />}
+                                            {open ? <BiMinus className="w-5 h-5" style={{ color: 'var(--accent)' }} /> : <BiPlus className="w-5 h-5" style={{ color: 'var(--accent)' }} />}
                                         </DisclosureButton>
                                         <DisclosurePanel className="px-4 pt-4 pb-2 text-foreground-accent">
                                             {faq.answer}

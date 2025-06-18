@@ -38,9 +38,9 @@ const Header: React.FC = () => {
                 }`}>
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-2">
-                        <FaBox className={`text-foreground min-w-fit transition-all duration-300 ${
+                        <FaBox className={`min-w-fit transition-all duration-300 ${
                             isScrolled ? 'w-6 h-6' : 'w-7 h-7'
-                        }`} />
+                        }`} style={{ color: 'var(--foreground)' }} />
                         <span className={`font-semibold text-foreground cursor-pointer transition-all duration-300 ${
                             isScrolled ? 'text-xl' : 'text-xl'
                         }`}>
@@ -53,7 +53,7 @@ const Header: React.FC = () => {
                             <li key={item.text}>
                                 <Link href={item.url} className={`font-bold hover:scale-105 transition-all duration-300 ${
                                     isScrolled ? 'text-base' : 'text-base'
-                                }`} style={{ color: 'var(--primary)' }} onMouseEnter={(e) => e.currentTarget.style.color = 'var(--primary-accent)'} onMouseLeave={(e) => e.currentTarget.style.color = 'var(--primary)'}>
+                                }`} style={{ color: 'var(--foreground)' }} onMouseEnter={(e) => e.currentTarget.style.color = 'var(--primary-accent)'} onMouseLeave={(e) => e.currentTarget.style.color = 'var(--foreground)'}>
                                     {item.text}
                                 </Link>
                             </li>
@@ -99,13 +99,13 @@ const Header: React.FC = () => {
                     <ul className="flex flex-col space-y-4 pt-1 pb-6 px-6">
                         {menuItems.map(item => (
                             <li key={item.text}>
-                                <Link href={item.url} className="font-bold hover:scale-105 transition-all duration-300 block" style={{ color: 'var(--primary)' }} onMouseEnter={(e) => e.currentTarget.style.color = 'var(--primary-accent)'} onMouseLeave={(e) => e.currentTarget.style.color = 'var(--primary)'} onClick={toggleMenu}>
+                                <Link href={item.url} className="font-bold hover:scale-105 transition-all duration-300 block" style={{ color: 'var(--foreground)' }} onMouseEnter={(e) => e.currentTarget.style.color = 'var(--primary-accent)'} onMouseLeave={(e) => e.currentTarget.style.color = 'var(--foreground)'} onClick={toggleMenu}>
                                     {item.text}
                                 </Link>
                             </li>
                         ))}
                         <li>
-                            <Link href="#cta" className="text-white bg-primary hover:bg-primary-hover px-5 py-2 rounded-full block w-fit font-semibold" onClick={toggleMenu}>
+                            <Link href="#cta" className="text-white px-5 py-2 rounded-full block w-fit font-semibold" style={{ backgroundColor: 'var(--accent)' }} onClick={toggleMenu}>
                                 Empieza tu plan
                             </Link>
                         </li>

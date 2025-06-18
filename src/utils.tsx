@@ -3,28 +3,28 @@ import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaThreads, FaTwitter, Fa
 export const getPlatformIconByName = (platformName: string): JSX.Element | null => {
     switch (platformName) {
         case 'facebook': {
-            return <FaFacebook size={24} className='min-w-fit' />;
+            return <FaFacebook size={24} className='min-w-fit' style={{ color: 'var(--foreground)' }} />;
         }
         case 'github': {
-            return <FaGithub size={24} className='min-w-fit' />;
+            return <FaGithub size={24} className='min-w-fit' style={{ color: 'var(--foreground)' }} />;
         }
         case 'instagram': {
-            return <FaInstagram size={24} className='min-w-fit' />;
+            return <FaInstagram size={24} className='min-w-fit' style={{ color: 'var(--foreground)' }} />;
         }
         case 'linkedin': {
-            return <FaLinkedin size={24} className='min-w-fit' />;
+            return <FaLinkedin size={24} className='min-w-fit' style={{ color: 'var(--foreground)' }} />;
         }
         case 'threads': {
-            return <FaThreads size={24} className='min-w-fit' />;
+            return <FaThreads size={24} className='min-w-fit' style={{ color: 'var(--foreground)' }} />;
         }
         case 'twitter': {
-            return <FaTwitter size={24} className='min-w-fit' />;
+            return <FaTwitter size={24} className='min-w-fit' style={{ color: 'var(--foreground)' }} />;
         } 
         case 'youtube': {
-            return <FaYoutube size={24} className='min-w-fit' />;
+            return <FaYoutube size={24} className='min-w-fit' style={{ color: 'var(--foreground)' }} />;
         }
         case 'x': {
-            return <FaXTwitter size={24} className='min-w-fit' />;
+            return <FaXTwitter size={24} className='min-w-fit' style={{ color: 'var(--foreground)' }} />;
         }
         default:
             console.log('Platform name not supported, no icon is returned:', platformName);

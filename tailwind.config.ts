@@ -29,14 +29,14 @@ const config: Config = {
           focus: "#ec8fa5",                   // Rosa medio focus
         },
         text: {
-          primary: "var(--text-primary)",     // #000000 - Texto principal
+          primary: "var(--text-default)",     // #000000 - Texto principal
           secondary: "var(--text-secondary)", // #c5b8ba - Texto secundario
           accent: "var(--text-accent)",       // #30938b - Texto de acento
           emphasis: "var(--text-emphasis)",   // #275a58 - Texto destacado
           inverse: "var(--text-inverse)",     // #ffffff - Texto sobre fondos oscuros
           // Clases anidadas para text-text-*
           text: {
-            primary: "var(--text-primary)",   // Para text-text-primary
+            primary: "var(--text-default)",   // Para text-text-primary
             secondary: "var(--text-secondary)", // Para text-text-secondary
             accent: "var(--text-accent)",     // Para text-text-accent
             emphasis: "var(--text-emphasis)", // Para text-text-emphasis

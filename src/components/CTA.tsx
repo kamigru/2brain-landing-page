@@ -1,6 +1,6 @@
 import { ctaDetails } from "@/data/cta"
 
-import ZenboxButton from "./HopeBoxButton"
+import ZenboxButton from "./ZenboxButton"
 
 const CTA: React.FC = () => {
     return (
@@ -8,7 +8,7 @@ const CTA: React.FC = () => {
             <div className="relative h-full w-full z-10 mx-auto py-12 sm:py-20">
                 <div className="h-full w-full">
                     <div className="h-full flex flex-col items-center justify-center text-center px-5">
-                        <h2 className="text-2xl sm:text-3xl md:text-5xl md:leading-tight font-semibold mb-4 max-w-2xl text-primary">{ctaDetails.heading}</h2>
+                        <h2 className="text-2xl sm:text-3xl md:text-5xl md:leading-tight font-semibold mb-4 max-w-2xl" style={{ color: 'var(--primary)' }}>{ctaDetails.heading}</h2>
 
                         <p className="mx-auto max-w-xl md:px-5 text-primary/90 text-lg">{ctaDetails.subheading}</p>
 

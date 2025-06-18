@@ -8,15 +8,15 @@ const Testimonials: React.FC = () => {
             {testimonials.map((testimonial, index) => (
                 <div
                     key={index}
-                    className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-white/15 relative"
+                    className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-lg relative"
                 >
                     {/* Comillas decorativas de apertura */}
-                    <div className="absolute top-4 left-4 text-3xl text-white/40 font-serif leading-none">
+                    <div className="absolute top-4 left-4 text-3xl font-serif leading-none" style={{ color: 'var(--accent)' }}>
                         &ldquo;
                     </div>
                     
                     {/* Comillas decorativas de cierre */}
-                    <div className="absolute bottom-4 right-4 text-3xl text-white/40 font-serif leading-none">
+                    <div className="absolute bottom-4 right-4 text-3xl font-serif leading-none" style={{ color: 'var(--accent)' }}>
                         &rdquo;
                     </div>
                     
@@ -31,13 +31,13 @@ const Testimonials: React.FC = () => {
                                 className="rounded-full shadow-md border-2 border-white/30"
                             />
                             <div className="ml-4">
-                                <h3 className="text-lg font-semibold text-white">{testimonial.name}</h3>
-                                <p className="text-sm text-white/70">{testimonial.role}</p>
+                                <h3 className="text-lg font-semibold" style={{ color: 'var(--foreground)' }}>{testimonial.name}</h3>
+                                <p className="text-sm" style={{ color: 'var(--accent)' }}>{testimonial.role}</p>
                             </div>
                         </div>
                         
                         {/* Mensaje del testimonio abajo */}
-                        <p className="text-white/90 text-center lg:text-left leading-relaxed">{testimonial.message}</p>
+                        <p className="text-center lg:text-left leading-relaxed" style={{ color: 'var(--text-default)' }}>{testimonial.message}</p>
                     </div>
                 </div>
             ))}
