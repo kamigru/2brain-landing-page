@@ -5,20 +5,16 @@
 :root {
   /* Nueva paleta de colores - Variables de compatibilidad */
   --background: #f6eef2;           /* surface.DEFAULT */
-  --foreground: #275a58;          /* text.primary */
-  --primary: #30938b;             /* primary.DEFAULT */
+  --foreground: #1f4746;          /* text.primary */
+  --primary: #30938b;             /* primary.DEFAULT y text-accent */
   --secondary: #e2c9d5;           /* secondary.DEFAULT */
-  --accent: #a6597e;             /* accent.DEFAULT */
+  --accent: #a6597e;             /* iconos y hover de --text-secondary */
 
   --primary-accent: #25746d;      /* primary.hover */
-  --foreground-accent: #c5b8ba;   /* text.secondary */
   --surface-primary: #ffffff;     /* surface.DEFAULT */
   
   --text-default: #000000;        /* Títulos principales, texto más importante */
-  --text-secondary: #c18ba5;      /* Texto de apoyo, menos importante */
-  --text-accent: #30938b;         /* Enlaces, elementos interactivos */
-  --text-emphasis: #275a58;       /* Elementos que necesitan destacar */
-  --text-inverse: #ffffff;        /* Texto sobre fondos oscuros */
+  --text-secondary: #b87a98;      /* textos especialaes */
 }
 
 html {
@@ -28,7 +24,7 @@ html {
 body {
   @apply text-lg leading-relaxed;
   
-  color: var(--text-primary);
+  color: var(--text-default);
   background: var(--background);
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -161,13 +157,13 @@ h6 {
 /* Estilos de párrafo con jerarquía */
 p {
   line-height: 1.7;
-  color: var(--text-primary);
+  color: var(--text-default);
 }
 
 p.lead {
   font-size: 1.125rem;
   font-weight: 500;
-  color: var(--text-primary);
+  color: var(--text-default);
 }
 
 p.secondary {
@@ -176,13 +172,13 @@ p.secondary {
 }
 
 p.emphasis {
-  color: var(--text-emphasis);
+  color: var(--foreground);
   font-weight: 600;
 }
 
 /* Texto sobre fondos oscuros */
 .text-on-dark {
-  color: var(--text-inverse);
+  color: var(--surface-primary);
 }
 
 .text-on-dark h1,
@@ -191,14 +187,14 @@ p.emphasis {
 .text-on-dark h4,
 .text-on-dark h5,
 .text-on-dark h6 {
-  color: var(--foreground);
+  color: var(--surface-primary);
 }
 
 /* Estilos de utilidad para la nueva paleta */
 @layer utilities {
   /* Colores de texto con jerarquía clara */
   .text-primary {
-    color: var(--text-primary); /* Verde oscuro - Más importante */
+    color: var(--text-default); /* Negro - Más importante */
   }
   
   .text-secondary {
@@ -206,15 +202,15 @@ p.emphasis {
   }
 
   .text-secondary-accent {
-    color: var(--accent); /* Gris malva - Menos importante */
+    color: var(--accent); /* Rosa - Menos importante */
   }
   
   .text-accent {
-    color: var(--text-accent); /* Verde teal - Interactivo */
+    color: var(--primary); /* Verde teal - Interactivo */
   }
   
   .text-emphasis {
-    color: var(--text-emphasis); /* Rosa brillante - Destacar */
+    color: var(--foreground); /* Verde oscuro - Destacar */
   }
   
   /* Fondos */
@@ -223,17 +219,17 @@ p.emphasis {
   }
   
   .bg-surface-secondary {
-    background-color: var(--surface-secondary);
+    background-color: var(--secondary);
   }
   
   .bg-surface-accent {
-    background-color: var(--surface-accent);
+    background-color: var(--accent);
   }
   
   /* Utilidades de tipografía semánticas */
   .text-readable {
     line-height: 1.7;
-    color: var(--text-primary);
+    color: var(--text-default);
   }
   
   .text-readable-secondary {
@@ -243,12 +239,12 @@ p.emphasis {
   }
   
   .text-interactive {
-    color: var(--text-accent);
+    color: var(--primary);
     font-weight: 600;
   }
   
   .text-highlight {
-    color: var(--text-emphasis);
+    color: var(--foreground);
     font-weight: 600;
   }
   
