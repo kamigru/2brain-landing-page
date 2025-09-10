@@ -1,0 +1,55 @@
+{
+  "version": "0.2",
+  "language": "en,es",
+  "dictionaries": [
+    "typescript", 
+    "node", 
+    "html", 
+    "css", 
+    "bash",
+    "es-es",
+    "en_us"
+  ],
+  "dictionaryDefinitions": [
+    {
+      "name": "project-words",
+      "path": "./project-words.txt",
+      "addWords": true
+    }
+  ],
+  "words": [
+    "Zenbox",
+    "thebox",
+    "tailwindcss",
+    "framer",
+    "headlessui",
+    "clsx",
+    "especialaes"
+  ],
+  "ignorePaths": [
+    "node_modules/**",
+    ".next/**", 
+    "dist/**",
+    "build/**",
+    "*.min.js",
+    "*.min.css",
+    "package-lock.json",
+    "yarn.lock"
+  ],
+  "allowCompoundWords": true,
+  "caseSensitive": false,
+  "languageSettings": [
+    {
+      "languageId": "*",
+      "locale": "en,es-ES"
+    },
+    {
+      "languageId": "typescript,typescriptreact",
+      "dictionaries": ["typescript", "node", "html", "css", "es-es"]
+    },
+    {
+      "languageId": "css",
+      "dictionaries": ["css", "es-es"]
+    }
+  ]
+}

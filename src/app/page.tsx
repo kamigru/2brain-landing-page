@@ -1,37 +1,50 @@
 import Hero from "@/components/Hero";
-import Testimonials from "@/components/Testimonials";
-import FAQ from "@/components/FAQ";
-// import Logos from "@/components/Logos";
-import Benefits from "@/components/Benefits/Benefits";
 import Container from "@/components/Container";
 import Section from "@/components/Section";
-import Stats from "@/components/Stats";
-import CTA from "@/components/CTA";
-import Confianza from "@/components/Confianza";
+import LazySection from "@/components/LazySection";
+import { lazy } from "react";
+
+// Lazy load de los componentes pesados
+const Benefits = lazy(() => import("@/components/Benefits/Benefits"));
+const Testimonials = lazy(() => import("@/components/Testimonials"));
+const FAQ = lazy(() => import("@/components/FAQ"));
+const Stats = lazy(() => import("@/components/Stats"));
+const CTA = lazy(() => import("@/components/CTA"));
+const Confianza = lazy(() => import("@/components/Confianza"));
 
 const HomePage: React.FC = () => {
   return (
     <>
+      {/* Hero se carga inmediatamente */}
       <Hero />
-      {/* <Logos /> */}
+      
       <div className="bg-surface relative z-20 pb-0">
-        <Container>
-          <Benefits />
-          <Section
-            id="confianza"
-            title="Confianza basada en hechos"
-            description="Validado en pilotos universitarios y respaldado por ciencia conductual."
-            primaryTitle={true}
-          >
-            <Confianza />
-            <div className="mt-16 pt-18">
-              <Stats />
-            </div>
-          </Section>
-        </Container>
+        {/* Benefits con lazy loading */}
+        <LazySection delay={100}>
+          <Container>
+            <Benefits />
+          </Container>
+        </LazySection>
 
-        {/* Sección de testimonios con fondo rosáceo */}
-        <div className="relative mt-10 lg:mt-16 lg:px-8 mx-4 lg:mx-12">
+        {/* Sección Confianza con lazy loading */}
+        <LazySection delay={200}>
+          <Container>
+            <Section
+              id="confianza"
+              title="Confianza basada en hechos"
+              description="Validado en pilotos universitarios y respaldado por ciencia conductual."
+              primaryTitle={true}
+            >
+              <Confianza />
+              <div className="mt-16 pt-18">
+                <Stats />
+              </div>
+            </Section>
+          </Container>
+        </LazySection>
+
+        {/* Sección de testimonios con fondo rosáceo - con lazy loading */}
+        <LazySection className="relative mt-10 lg:mt-16 lg:px-8 mx-4 lg:mx-12" delay={300}>
           <div className="rounded-3xl opacity-95 absolute inset-0 -z-10 w-full" style={{ backgroundColor: 'var(--background)' }}>
             <div className="rounded-3xl absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_600px_at_50%_500px,#30938b,transparent)]"></div>
             <div className="rounded-3xl absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/5"></div>
@@ -46,15 +59,15 @@ const HomePage: React.FC = () => {
               <Testimonials />
             </Section>
           </Container>
-        </div>
+        </LazySection>
 
-        <Container>
-          {/* Preguntas frecuentes */}
-          <FAQ />
-          
-          {/* Call to Action final */}
-          <CTA />
-        </Container>
+        {/* FAQ y CTA con lazy loading */}
+        <LazySection delay={400}>
+          <Container>
+            <FAQ />
+            <CTA />
+          </Container>
+        </LazySection>
       </div>
     </>
   );

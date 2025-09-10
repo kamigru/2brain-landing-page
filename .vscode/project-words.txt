@@ -1,0 +1,20 @@
+# Palabras específicas del proyecto
+# Nombres de marca y productos
+Zenbox
+thebox
+
+# Librerías y tecnologías
+tailwindcss
+framer
+headlessui
+clsx
+nextjs
+
+# Terminología específica del proyecto
+autocontrol
+conductual
+universitarios
+
+# Corrección de errores tipográficos en el código
+# (estas deberían corregirse en el código fuente)
+especialaes

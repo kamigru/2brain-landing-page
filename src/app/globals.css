@@ -290,5 +290,130 @@ p.emphasis {
 } */
 
 .benefit-section:last-of-type > div {
-  @apply mb-10;
+  @apply mb-10 border-b-0;
+}
+
+/* =================================
+   MOBILE OPTIMIZATIONS
+================================= */
+
+/* Mejoras generales para móvil */
+@media (max-width: 768px) {
+  /* Optimizar tipografía en móvil */
+  h1 {
+    @apply text-3xl leading-tight;
+    letter-spacing: -0.02em;
+  }
+  
+  h2 {
+    @apply text-2xl leading-tight;
+    letter-spacing: -0.015em;
+  }
+  
+  h3 {
+    @apply text-xl leading-tight;
+    letter-spacing: -0.01em;
+  }
+
+  /* Mejorar el espaciado en móvil */
+  body {
+    line-height: 1.6;
+  }
+
+  /* Optimizar botones para móvil */
+  button, 
+  .btn,
+  a[class*="bg-primary"],
+  a[class*="bg-accent"] {
+    @apply min-h-[44px]; /* Tamaño mínimo táctil recomendado */
+    font-size: 16px; /* Prevenir zoom en iOS */
+  }
+
+  /* Mejorar la legibilidad de párrafos en móvil */
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* Optimizar secciones para móvil */
+  section {
+    scroll-margin-top: 5rem; /* Ajustar para header más pequeño */
+  }
+
+  /* Mejorar animaciones en móvil */
+  * {
+    animation-duration: 0.2s !important;
+    transition-duration: 0.2s !important;
+  }
+
+  /* Optimizar imágenes para móvil */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Mejoras específicas para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  /* Reducir aún más el padding en móviles pequeños */
+  .container {
+    @apply px-3;
+  }
+
+  /* Optimizar títulos para pantallas muy pequeñas */
+  h1 {
+    @apply text-2xl;
+  }
+  
+  h2 {
+    @apply text-xl;
+  }
+
+  /* Reducir el tamaño de botones en pantallas muy pequeñas */
+  button,
+  .btn {
+    @apply px-4 py-2 text-sm;
+  }
+
+  /* Optimizar espaciado vertical */
+  section {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Mejoras para el estado de carga y performance */
+.loading-skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Mejoras de accesibilidad para móvil */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Mejorar el contraste en modo oscuro si es necesario */
+@media (prefers-color-scheme: dark) {
+  /* Mantener colores consistentes independientemente del modo del sistema */
+  :root {
+    --background: #f6eef2;
+    --foreground: #1f4746;
+    --primary: #30938b;
+    --secondary: #e2c9d5;
+    --accent: #a6597e;
+  }
 }

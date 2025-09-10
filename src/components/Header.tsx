@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { Transition } from '@headlessui/react';
-import { HiOutlineXMark, HiBars3 } from 'react-icons/hi2';
+import { HiOutlineXMark } from 'react-icons/hi2';
 import { FaBox } from 'react-icons/fa';
 
 import Container from './Container';
@@ -28,21 +28,33 @@ const Header: React.FC = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    // Cerrar menú móvil al hacer scroll
+    useEffect(() => {
+        const handleScroll = () => {
+            if (isOpen) {
+                setIsOpen(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [isOpen]);
+
     return (
         <header className="bg-transparent sticky top-0 left-0 right-0 z-50 w-full flex justify-center">
             <Container className="!px-0">
                 <nav className={`mx-auto flex justify-between items-center transition-all duration-300 ${
                     isScrolled 
                         ? 'bg-white/20 backdrop-blur-lg shadow-lg rounded-2xl mx-4 mt-4 border border-white/30 py-2 px-4 md:py-4' 
-                        : 'shadow-none bg-transparent py-2 px-5 md:py-6'
+                        : 'shadow-none bg-transparent py-3 px-5 md:py-6'
                 }`}>
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-2">
                         <FaBox className={`min-w-fit transition-all duration-300 ${
-                            isScrolled ? 'w-6 h-6' : 'w-7 h-7'
+                            isScrolled ? 'w-6 h-6 md:w-7 md:h-7' : 'w-7 h-7 md:w-8 md:h-8'
                         }`} style={{ color: 'var(--foreground)' }} />
                         <span className={`font-semibold text-foreground cursor-pointer transition-all duration-300 ${
-                            isScrolled ? 'text-xl' : 'text-xl'
+                            isScrolled ? 'text-xl md:text-xl' : 'text-xl md:text-2xl'
                         }`}>
                             {siteDetails.siteName}
                         </span>
@@ -71,14 +83,18 @@ const Header: React.FC = () => {
                         <button
                             onClick={toggleMenu}
                             type="button"
-                            className="bg-primary text-white focus:outline-none rounded-full w-10 h-10 flex items-center justify-center"
+                            className={`bg-primary text-white focus:outline-none rounded-full flex items-center justify-center transition-all duration-300 ${
+                                isScrolled ? 'w-10 h-10' : 'w-11 h-11'
+                            }`}
                             aria-controls="mobile-menu"
                             aria-expanded={isOpen}
                         >
                             {isOpen ? (
-                                <HiOutlineXMark className="h-6 w-6" aria-hidden="true" style={{ color: '#ffffff' }} />
+                                <HiOutlineXMark className={`${isScrolled ? 'h-6 w-6' : 'h-7 w-7'}`} aria-hidden="true" style={{ color: '#ffffff' }} />
                             ) : (
-                                <HiBars3 className="h-6 w-6" aria-hidden="true" style={{ color: '#ffffff' }} />
+                                <svg className={`${isScrolled ? 'h-6 w-6' : 'h-7 w-7'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8h16M4 16h16" />
+                                </svg>
                             )}
                             <span className="sr-only">Toggle navigation</span>
                         </button>
@@ -89,23 +105,40 @@ const Header: React.FC = () => {
             <Transition
                 show={isOpen}
                 enter="transition ease-out duration-200 transform"
-                enterFrom="opacity-0 scale-95"
-                enterTo="opacity-100 scale-100"
-                leave="transition ease-in duration-75 transform"
-                leaveFrom="opacity-100 scale-100"
-                leaveTo="opacity-0 scale-95"
+                enterFrom="opacity-0 scale-95 translate-y-2"
+                enterTo="opacity-100 scale-100 translate-y-0"
+                leave="transition ease-in duration-150 transform"
+                leaveFrom="opacity-100 scale-100 translate-y-0"
+                leaveTo="opacity-0 scale-95 translate-y-2"
             >
-                <div id="mobile-menu" className="md:hidden bg-white shadow-lg rounded-xl mt-2 mx-4">
-                    <ul className="flex flex-col space-y-4 pt-1 pb-6 px-6">
-                        {menuItems.map(item => (
+                <div 
+                    id="mobile-menu" 
+                    className="md:hidden fixed top-16 left-4 right-4 bg-white/95 backdrop-blur-lg shadow-xl rounded-2xl border border-white/40 overflow-hidden z-40"
+                >
+                    <ul className="flex flex-col py-4">
+                        {menuItems.map((item, index) => (
                             <li key={item.text}>
-                                <Link href={item.url} className="font-bold hover:scale-105 transition-all duration-300 block" style={{ color: 'var(--foreground)' }} onMouseEnter={(e) => e.currentTarget.style.color = 'var(--primary-accent)'} onMouseLeave={(e) => e.currentTarget.style.color = 'var(--foreground)'} onClick={toggleMenu}>
+                                <Link 
+                                    href={item.url} 
+                                    className="font-semibold transition-all duration-200 block px-6 py-3 hover:bg-primary/5 active:bg-primary/10" 
+                                    style={{ color: 'var(--foreground)' }} 
+                                    onMouseEnter={(e) => e.currentTarget.style.color = 'var(--primary-accent)'} 
+                                    onMouseLeave={(e) => e.currentTarget.style.color = 'var(--foreground)'} 
+                                    onClick={toggleMenu}
+                                >
                                     {item.text}
                                 </Link>
+                                {index < menuItems.length - 1 && (
+                                    <div className="mx-6 h-px bg-primary/10"></div>
+                                )}
                             </li>
                         ))}
-                        <li>
-                            <Link href="#cta" className="text-white px-5 py-2 rounded-full block w-fit font-semibold" style={{ backgroundColor: 'var(--accent)' }} onClick={toggleMenu}>
+                        <li className="px-6 pt-4">
+                            <Link 
+                                href="#cta" 
+                                className="text-white px-6 py-3 rounded-full block text-center font-semibold bg-primary hover:bg-primary-hover transition-all duration-200 shadow-lg" 
+                                onClick={toggleMenu}
+                            >
                                 Empieza tu plan
                             </Link>
                         </li>

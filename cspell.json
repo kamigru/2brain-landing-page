@@ -1,0 +1,50 @@
+{
+  "version": "0.2",
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "language": "en,es-ES",
+  "dictionaries": [
+    "typescript",
+    "node", 
+    "html",
+    "css",
+    "bash",
+    "es-es",
+    "project-words"
+  ],
+  "dictionaryDefinitions": [
+    {
+      "name": "project-words",
+      "path": "./.vscode/project-words.txt",
+      "addWords": true
+    }
+  ],
+  "words": [
+    "Zenbox",
+    "zenbox", 
+    "thebox",
+    "tailwindcss",
+    "framer",
+    "headlessui",
+    "clsx"
+  ],
+  "ignorePaths": [
+    "node_modules/**",
+    ".next/**",
+    "dist/**", 
+    "build/**",
+    "*.min.js",
+    "*.min.css",
+    "package-lock.json",
+    "yarn.lock"
+  ],
+  "allowCompoundWords": true,
+  "caseSensitive": false,
+  "import": ["@cspell/dict-es-es/cspell-ext.json"],
+  "languageSettings": [
+    {
+      "languageId": "*",
+      "locale": "en,es-ES",
+      "dictionaries": ["typescript", "html", "css", "es-es", "project-words"]
+    }
+  ]
+}
