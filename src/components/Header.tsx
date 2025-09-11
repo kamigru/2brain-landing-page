@@ -52,7 +52,7 @@ const Header: React.FC = () => {
                     <Link href="/" className="flex items-center gap-2">
                         <FaBox className={`min-w-fit transition-all duration-300 ${
                             isScrolled ? 'w-6 h-6 md:w-7 md:h-7' : 'w-7 h-7 md:w-8 md:h-8'
-                        }`} style={{ color: 'var(--foreground)' }} />
+                        }`} style={{ color: 'var(--text-strong)' }} />
                         <span className={`font-semibold text-foreground cursor-pointer transition-all duration-300 ${
                             isScrolled ? 'text-xl md:text-xl' : 'text-xl md:text-2xl'
                         }`}>
@@ -65,7 +65,7 @@ const Header: React.FC = () => {
                             <li key={item.text}>
                                 <Link href={item.url} className={`font-bold hover:scale-105 transition-all duration-300 ${
                                     isScrolled ? 'text-base' : 'text-base'
-                                }`} style={{ color: 'var(--foreground)' }} onMouseEnter={(e) => e.currentTarget.style.color = 'var(--primary-accent)'} onMouseLeave={(e) => e.currentTarget.style.color = 'var(--foreground)'}>
+                                }`} style={{ color: 'var(--text-strong)' }} onMouseEnter={(e) => e.currentTarget.style.color = 'var(--primary-hover)'} onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-strong)'}>
                                     {item.text}
                                 </Link>
                             </li>
@@ -121,9 +121,9 @@ const Header: React.FC = () => {
                                 <Link 
                                     href={item.url} 
                                     className="font-semibold transition-all duration-200 block px-6 py-3 hover:bg-primary/5 active:bg-primary/10" 
-                                    style={{ color: 'var(--foreground)' }} 
-                                    onMouseEnter={(e) => e.currentTarget.style.color = 'var(--primary-accent)'} 
-                                    onMouseLeave={(e) => e.currentTarget.style.color = 'var(--foreground)'} 
+                                    style={{ color: 'var(--text-strong)' }} 
+                                    onMouseEnter={(e) => e.currentTarget.style.color = 'var(--primary-hover)'} 
+                                    onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-strong)'} 
                                     onClick={toggleMenu}
                                 >
                                     {item.text}

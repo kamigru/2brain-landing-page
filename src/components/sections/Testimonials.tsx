@@ -31,13 +31,13 @@ const Testimonials: React.FC = () => {
                                 className="rounded-full shadow-md border-2 border-white/30"
                             />
                             <div className="ml-4">
-                                <h3 className="text-lg font-semibold" style={{ color: 'var(--foreground)' }}>{testimonial.name}</h3>
+                                <h3 className="text-lg font-semibold" style={{ color: 'var(--text-strong)' }}>{testimonial.name}</h3>
                                 <p className="text-sm" style={{ color: 'var(--accent)' }}>{testimonial.role}</p>
                             </div>
                         </div>
                         
                         {/* Mensaje del testimonio abajo */}
-                        <p className="text-center lg:text-left leading-relaxed" style={{ color: 'var(--text-default)' }}>{testimonial.message}</p>
+                        <p className="text-center lg:text-left leading-relaxed" style={{ color: 'var(--text)' }}>{testimonial.message}</p>
                     </div>
                 </div>
             ))}

@@ -29,7 +29,7 @@ const FAQ: React.FC = () => {
                         <div key={index} className="mb-4 md:mb-7">
                             <Disclosure>
                                 {({ open }) => (
-                                    <>
+                                    <div>
                                         <DisclosureButton className="flex items-center justify-between w-full px-3 md:px-4 py-4 md:pt-7 text-left border-t border-primary/10 hover:bg-primary/5 transition-colors duration-200 rounded-lg">
                                             <span className="text-lg md:text-2xl font-semibold text-emphasis pr-4 leading-tight">
                                                 {faq.question}
@@ -41,10 +41,10 @@ const FAQ: React.FC = () => {
                                                 }
                                             </div>
                                         </DisclosureButton>
-                                        <DisclosurePanel className="px-3 md:px-4 pt-3 md:pt-4 pb-4 text-foreground-accent text-base md:text-lg leading-relaxed">
+                                        <DisclosurePanel className="px-3 md:px-4 pt-3 md:pt-4 pb-4 text-text-secondary text-base md:text-lg leading-relaxed">
                                             {faq.answer}
                                         </DisclosurePanel>
-                                    </>
+                                    </div>
                                 )}
                             </Disclosure>
                         </div>

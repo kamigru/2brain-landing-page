@@ -3,18 +3,19 @@
 @tailwind utilities;
 
 :root {
-  /* Nueva paleta de colores - Variables de compatibilidad */
-  --background: #f6eef2;           /* surface.DEFAULT */
-  --foreground: #1f4746;          /* text.primary */
-  --primary: #30938b;             /* primary.DEFAULT y text-accent */
-  --secondary: #e2c9d5;           /* secondary.DEFAULT */
-  --accent: #a6597e;             /* iconos y hover de --text-secondary */
 
-  --primary-accent: #25746d;      /* primary.hover */
-  --surface-primary: #ffffff;     /* surface.DEFAULT */
+  --background: #f1e0e9;          /* Fondo principal de la app */
+  --surface: #fffdf6;             /* Tarjetas y contenedores */
+  --surface-soft: #e2c9d5;        /* Fondos suaves/secundarios */
   
-  --text-default: #000000;        /* Títulos principales, texto más importante */
-  --text-secondary: #b87a98;      /* textos especialaes */
+  --primary: #30938b;             /* Color principal de marca */
+  --primary-hover: #25746d;       /* Hover del color principal */
+  
+  --text: #000000;                /* Texto principal */
+  --text-muted: #b87a98;          /* Texto secundario/suave */
+  --text-strong: #1f4746;         /* Texto destacado/fuerte */
+  
+  --accent: #a6597e;              /* Iconos y elementos decorativos */
 }
 
 html {
@@ -24,7 +25,7 @@ html {
 body {
   @apply text-lg leading-relaxed;
   
-  color: var(--text-default);
+  color: var(--text);
   background: var(--background);
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -130,14 +131,14 @@ h3 {
   @apply text-2xl md:text-3xl lg:text-4xl;
   font-weight: 700;
   letter-spacing: -0.02em;
-  color: var(--foreground); /* Títulos de sección */
+  color: var(--text-strong); /* Títulos de sección */
 }
 
 h4 {
   @apply text-xl md:text-2xl lg:text-3xl;
   font-weight: 600;
   letter-spacing: -0.015em;
-  color: var(--foreground); /* Títulos de tarjetas */
+  color: var(--text-strong); /* Títulos de tarjetas */
 }
 
 h5 {
@@ -157,28 +158,28 @@ h6 {
 /* Estilos de párrafo con jerarquía */
 p {
   line-height: 1.7;
-  color: var(--text-default);
+  color: var(--text);
 }
 
 p.lead {
   font-size: 1.125rem;
   font-weight: 500;
-  color: var(--text-default);
+  color: var(--text);
 }
 
 p.secondary {
-  color: var(--text-secondary);
+  color: var(--text-muted);
   font-weight: 400;
 }
 
 p.emphasis {
-  color: var(--foreground);
+  color: var(--text-strong);
   font-weight: 600;
 }
 
 /* Texto sobre fondos oscuros */
 .text-on-dark {
-  color: var(--surface-primary);
+  color: var(--surface);
 }
 
 .text-on-dark h1,
@@ -187,18 +188,18 @@ p.emphasis {
 .text-on-dark h4,
 .text-on-dark h5,
 .text-on-dark h6 {
-  color: var(--surface-primary);
+  color: var(--surface);
 }
 
 /* Estilos de utilidad para la nueva paleta */
 @layer utilities {
   /* Colores de texto con jerarquía clara */
   .text-primary {
-    color: var(--text-default); /* Negro - Más importante */
+    color: var(--text); /* Negro - Más importante */
   }
   
   .text-secondary {
-    color: var(--text-secondary); /* Gris malva - Menos importante */
+    color: var(--text-muted); /* Gris malva - Menos importante */
   }
 
   .text-secondary-accent {
@@ -210,16 +211,16 @@ p.emphasis {
   }
   
   .text-emphasis {
-    color: var(--foreground); /* Verde oscuro - Destacar */
+    color: var(--text-strong); /* Verde oscuro - Destacar */
   }
   
   /* Fondos */
   .bg-surface {
-    background-color: var(--surface-primary);
+    background-color: var(--surface);
   }
   
   .bg-surface-secondary {
-    background-color: var(--secondary);
+    background-color: var(--surface-soft);
   }
   
   .bg-surface-accent {
@@ -229,12 +230,12 @@ p.emphasis {
   /* Utilidades de tipografía semánticas */
   .text-readable {
     line-height: 1.7;
-    color: var(--text-default);
+    color: var(--text);
   }
   
   .text-readable-secondary {
     line-height: 1.6;
-    color: var(--text-secondary);
+    color: var(--text-muted);
     font-weight: 500;
   }
   
@@ -244,7 +245,7 @@ p.emphasis {
   }
   
   .text-highlight {
-    color: var(--foreground);
+    color: var(--text-strong);
     font-weight: 600;
   }
   
@@ -406,14 +407,4 @@ p.emphasis {
   }
 }
 
-/* Mejorar el contraste en modo oscuro si es necesario */
-@media (prefers-color-scheme: dark) {
-  /* Mantener colores consistentes independientemente del modo del sistema */
-  :root {
-    --background: #f6eef2;
-    --foreground: #1f4746;
-    --primary: #30938b;
-    --secondary: #e2c9d5;
-    --accent: #a6597e;
-  }
-}
+/* Los colores se mantienen consistentes independientemente del modo del sistema */

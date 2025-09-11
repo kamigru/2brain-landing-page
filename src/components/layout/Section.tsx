@@ -21,7 +21,7 @@ const Section: React.FC<React.PropsWithChildren<Props>> = ({
             <SectionTitle style={primaryTitle ? { color: 'var(--primary)' } : {}}>
                 <h2 className="text-center mb-2 text-balance">{title}</h2>
             </SectionTitle>
-            <p className="mb-12 text-center max-w-2xl mx-auto text-balance" style={{ color: 'var(--foreground)' }}>
+            <p className="mb-12 text-center max-w-2xl mx-auto text-balance" style={{ color: 'var(--text-strong)' }}>
                 {description}
             </p>
             {children}

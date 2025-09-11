@@ -20,10 +20,10 @@ const Hero: React.FC = () => {
             </div>
 
             <div className="text-center pt-12 md:pt-16 max-w-4xl mx-auto">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl md:leading-tight max-w-lg md:max-w-2xl mx-auto whitespace-pre-line font-dm-sans text-primary leading-tight">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl md:leading-tight max-w-lg md:max-w-2xl mx-auto whitespace-pre-line font-dm-sans leading-tight" style={{ color: 'var(--text-strong)' }}>
                     {heroDetails.heading}
                 </h1>
-                <p className="mt-6 md:mt-8 text-foreground max-w-lg md:max-w-xl mx-auto text-lg md:text-xl leading-relaxed px-2">
+                <p className="mt-6 md:mt-8 text-text-emphasis max-w-lg md:max-w-xl mx-auto text-lg md:text-xl leading-relaxed px-2">
                     {heroDetails.subheading}
                 </p>
                 
