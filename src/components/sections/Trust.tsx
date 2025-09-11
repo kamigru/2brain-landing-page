@@ -1,10 +1,10 @@
 import React from 'react';
-import { confianzaItems } from '@/data/confianza';
+import { trustItems } from '@/data/trust';
 
-const Confianza: React.FC = () => {
+const Trust: React.FC = () => {
     return (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-20">
-            {confianzaItems.map((item, index) => (
+            {trustItems.map((item, index) => (
                 <div key={index} className="text-center p-8 bg-surface rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-border-light/50">
                     <div className="flex justify-center mb-6">
                         {item.icon}
@@ -21,4 +21,4 @@ const Confianza: React.FC = () => {
     );
 };
 
-export default Confianza; 
+export default Trust; 

@@ -1,12 +1,12 @@
 import { FiAward, FiHeart, FiShield } from "react-icons/fi";
 
-export interface IConfianza {
+export interface ITrust {
     title: string;
     description: string;
     icon: React.ReactNode;
 }
 
-export const confianzaItems: IConfianza[] = [
+export const trustItems: ITrust[] = [
     {
         title: "Validado Científicamente",
         description: "Respaldado por pilotos universitarios y técnicas de psicología conductual con evidencia comprobada.",

@@ -6,7 +6,7 @@ import { Transition } from '@headlessui/react';
 import { HiOutlineXMark } from 'react-icons/hi2';
 import { FaBox } from 'react-icons/fa';
 
-import Container from './Container';
+import Container from './layout/Container';
 import { siteDetails } from '@/data/siteDetails';
 import { menuItems } from '@/data/menuItems';
 

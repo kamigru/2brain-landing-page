@@ -1,16 +1,16 @@
-import Hero from "@/components/Hero";
-import Container from "@/components/Container";
-import Section from "@/components/Section";
-import LazySection from "@/components/LazySection";
+import Hero from "@/components/sections/Hero";
+import Container from "@/components/layout/Container";
+import Section from "@/components/layout/Section";
+import LazySection from "@/components/layout/LazySection";
 import { lazy } from "react";
 
 // Lazy load de los componentes pesados
 const Benefits = lazy(() => import("@/components/Benefits/Benefits"));
-const Testimonials = lazy(() => import("@/components/Testimonials"));
-const FAQ = lazy(() => import("@/components/FAQ"));
-const Stats = lazy(() => import("@/components/Stats"));
-const CTA = lazy(() => import("@/components/CTA"));
-const Confianza = lazy(() => import("@/components/Confianza"));
+const Testimonials = lazy(() => import("@/components/sections/Testimonials"));
+const FAQ = lazy(() => import("@/components/sections/FAQ"));
+const Stats = lazy(() => import("@/components/sections/Stats"));
+const CTA = lazy(() => import("@/components/sections/CTA"));
+const Trust = lazy(() => import("@/components/sections/Trust"));
 
 const HomePage: React.FC = () => {
   return (
@@ -35,7 +35,7 @@ const HomePage: React.FC = () => {
               description="Validado en pilotos universitarios y respaldado por ciencia conductual."
               primaryTitle={true}
             >
-              <Confianza />
+              <Trust />
               <div className="mt-16 pt-18">
                 <Stats />
               </div>

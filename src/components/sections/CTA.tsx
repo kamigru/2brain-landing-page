@@ -1,6 +1,6 @@
 import { ctaDetails } from "@/data/cta"
 
-import ZenboxButton from "./ZenboxButton"
+import ZenboxButton from "../ui/buttons/ZenboxButton"
 
 const CTA: React.FC = () => {
     return (

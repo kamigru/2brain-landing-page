@@ -2,7 +2,7 @@
 
 import React, { Suspense } from 'react';
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
-import LoadingSkeleton from './LoadingSkeleton';
+import LoadingSkeleton from '../ui/LoadingSkeleton';
 import AnimatedSection from './AnimatedSection';
 
 interface LazySectionProps {
