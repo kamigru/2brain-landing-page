@@ -39,7 +39,8 @@ const HomePage: React.FC = () => {
               id="confianza"
               title="Confianza basada en hechos"
               description="Validado en pilotos universitarios y respaldado por ciencia conductual."
-              primaryTitle={true}
+              primaryTitle={false}
+              className="trust-section"
             >
               <Trust />
               <div className="mt-16 pt-18">

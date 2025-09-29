@@ -11,12 +11,12 @@ const Testimonials: React.FC = () => {
                     className="bg-gray-900/40 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/30 shadow-lg relative hover:bg-gray-900/60 transition-all duration-300"
                 >
                     {/* Comillas decorativas de apertura */}
-                    <div className="absolute top-4 left-4 text-3xl font-serif leading-none text-[#5b21b6]">
+                    <div className="absolute top-4 left-4 text-3xl font-serif leading-none" style={{ color: 'var(--accent)' }}>
                         &ldquo;
                     </div>
 
                     {/* Comillas decorativas de cierre */}
-                    <div className="absolute bottom-4 right-4 text-3xl font-serif leading-none text-[#5b21b6]">
+                    <div className="absolute bottom-4 right-4 text-3xl font-serif leading-none" style={{ color: 'var(--accent)' }}>
                         &rdquo;
                     </div>
                     
@@ -32,7 +32,7 @@ const Testimonials: React.FC = () => {
                             />
                             <div className="ml-4">
                                 <h3 className="text-lg font-semibold text-white">{testimonial.name}</h3>
-                                <p className="text-sm text-[#0891b2]">{testimonial.role}</p>
+                                <p className="text-sm" style={{ color: 'var(--secondary)' }}>{testimonial.role}</p>
                             </div>
                         </div>
 

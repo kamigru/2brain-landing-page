@@ -18,7 +18,7 @@ const FAQ: React.FC = () => {
                     </p>
                     <a
                         href="mailto:contacto@2brain.app"
-                        className="mt-3 block text-lg md:text-xl lg:text-4xl text-[#0891b2] font-semibold hover:text-[#0e7490] transition-colors duration-300 active:scale-95"
+                        className="mt-3 block text-lg md:text-xl lg:text-4xl text-[#00A6C7] font-semibold hover:text-[#0088a3] transition-colors duration-300 active:scale-95"
                     >
                         contacto@2brain.app
                     </a>
@@ -36,8 +36,8 @@ const FAQ: React.FC = () => {
                                             </span>
                                             <div className="flex-shrink-0 ml-4">
                                                 {open ?
-                                                    <BiMinus className="w-6 h-6 md:w-5 md:h-5 text-[#5b21b6]" /> :
-                                                    <BiPlus className="w-6 h-6 md:w-5 md:h-5 text-[#5b21b6]" />
+                                                    <BiMinus className="w-6 h-6 md:w-5 md:h-5 text-[#5B21B6]" /> :
+                                                    <BiPlus className="w-6 h-6 md:w-5 md:h-5 text-[#5B21B6]" />
                                                 }
                                             </div>
                                         </DisclosureButton>

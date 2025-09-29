@@ -18,23 +18,20 @@ const TwoBrainButton: React.FC<TwoBrainButtonProps> = ({
     // Estilos base según variante
     const variantStyles = {
         primary: `
-            bg-primary hover:bg-primary-hover active:bg-primary-active
-            focus:bg-primary-focus focus:ring-2 focus:ring-primary-focus focus:ring-opacity-50
-            text-text-inverse font-semibold
-            shadow-lg hover:shadow-xl
+            bg-gradient-to-r from-primary via-accent to-primary-light
+            hover:from-primary-hover hover:via-accent-hover hover:to-primary
+            text-white font-bold shadow-lg shadow-primary/25 hover:shadow-primary/40
+            border border-primary/30 hover:border-primary/50
+            relative overflow-hidden
         `,
         secondary: `
-            bg-secondary hover:bg-secondary-hover active:bg-secondary-active
-            focus:bg-secondary-focus focus:ring-2 focus:ring-secondary-focus focus:ring-opacity-50
-            text-text-primary font-semibold
-            shadow-md hover:shadow-lg
-            border border-border-light
+            bg-secondary hover:bg-secondary-hover
+            text-white font-semibold
+            border border-gray-600/50
         `,
         accent: `
-            bg-accent hover:bg-accent-hover active:bg-accent-active
-            focus:bg-accent-focus focus:ring-2 focus:ring-accent-focus focus:ring-opacity-50
-            text-text-primary font-semibold
-            shadow-md hover:shadow-lg
+            bg-accent hover:bg-accent-hover
+            text-white font-semibold
         `
     };
 

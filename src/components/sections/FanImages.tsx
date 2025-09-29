@@ -22,7 +22,7 @@ const FanImages: React.FC<FanImagesProps> = ({
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-br from-[#4c1d95]/20 via-[#5b21b6]/10 to-background relative overflow-hidden">
+    <section className="py-24 bg-gradient-to-br from-[#3A7AD4]/20 via-[#5B21B6]/10 to-background relative overflow-hidden">
       <div className="container mx-auto px-4 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

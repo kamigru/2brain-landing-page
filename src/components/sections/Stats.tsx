@@ -6,11 +6,21 @@ const Stats: React.FC = () => {
             <div className="grid sm:grid-cols-3 gap-8">
                 {stats.map(stat => (
                     <div key={stat.title} className="text-center sm:text-left max-w-md sm:max-w-full mx-auto">
-                        <h3 className="mb-5 flex items-center gap-2 text-3xl font-semibold justify-center sm:justify-start" style={{ color: 'var(--text-strong)' }}>
+                        <h3 className="mb-5 flex items-center gap-2 text-3xl font-semibold justify-center sm:justify-start text-white">
                             {stat.icon}
                             {stat.title}
                         </h3>
-                        <p className="text-text-emphasis">{stat.description}</p>
+                        <p className="text-white">
+                            {stat.title === "60%" && (
+                                <>De usuarios <span style={{ color: 'var(--primary)' }} className="font-semibold">reducen la frecuencia del impulso</span> en 30 días según <span style={{ color: 'var(--primary)' }} className="font-semibold">validación científica</span>.</>
+                            )}
+                            {stat.title === "100%" && (
+                                <><span style={{ color: 'var(--primary)' }} className="font-semibold">Privacidad garantizada</span>. Cero recolección de datos personales, siempre.</>
+                            )}
+                            {stat.title === "20%" && (
+                                <>De nuestros beneficios se destinan a <span style={{ color: 'var(--primary)' }} className="font-semibold">investigación contra adicciones</span>.</>
+                            )}
+                        </p>
                     </div>
                 ))}
             </div>

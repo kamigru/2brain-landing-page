@@ -8,8 +8,11 @@ import { getPlatformIconByName } from '@/utils';
 
 const Footer: React.FC = () => {
     return (
-        <footer className="text-foreground py-10">
-            <div className="max-w-7xl w-full mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
+        <footer className="text-foreground py-10 relative">
+            {/* Fondo que se mezcla con el degradado del body */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+
+            <div className="relative z-10 max-w-7xl w-full mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
                 <div>
                     <Link href="/" className="flex items-center gap-2">
                         <FaFingerprint className="min-w-fit w-5 h-5 md:w-7 md:h-7" style={{ color: 'var(--text-strong)' }} />
@@ -57,10 +60,10 @@ const Footer: React.FC = () => {
                     )}
                 </div>
             </div>
-            <div className="mt-8 md:text-center text-foreground-accent px-6">
-                <p>Copyright &copy; {new Date().getFullYear()} {siteDetails.siteName}. All rights reserved.</p>
-                <p className="text-sm mt-2 text-gray-500">Made with &hearts; by <a href="https://nexilaunch.com" target="_blank">Nexi Launch</a></p>
-                <p className="text-sm mt-2 text-gray-500">UI kit by <a href="https://ui8.net/youthmind/products/fintech-finance-mobile-app-ui-kit" target="_blank">Youthmind</a></p>
+            <div className="relative z-10 mt-8 md:text-center text-foreground-accent px-6 border-t border-white/10 pt-8">
+                <p className="text-gray-300">Copyright &copy; {new Date().getFullYear()} {siteDetails.siteName}. All rights reserved.</p>
+                <p className="text-sm mt-2 text-gray-400">Made with &hearts; by <a href="https://nexilaunch.com" target="_blank" className="hover:text-primary transition-colors">Nexi Launch</a></p>
+                <p className="text-sm mt-2 text-gray-400">UI kit by <a href="https://ui8.net/youthmind/products/fintech-finance-mobile-app-ui-kit" target="_blank" className="hover:text-primary transition-colors">Youthmind</a></p>
             </div>
         </footer>
     );

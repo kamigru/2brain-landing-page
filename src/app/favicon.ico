@@ -1,14 +1,18 @@
-<svg width="120" height="150" viewBox="0 0 120 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="1" y="31" width="118" height="118" rx="33" stroke="#3DDC97" stroke-width="2" stroke-miterlimit="3.99393" stroke-linejoin="round"/>
-<line y1="67.5" x2="119" y2="67.5" stroke="#3DDC97"/>
-<path d="M59.5 31.5C58.0251 24.4941 58.7924 21.4763 63.5 18" stroke="#3DDC97" stroke-width="2"/>
-<g clip-path="url(#clip0_10_47)">
-<path d="M86.504 16.9376L85.1895 18.445C78.8624 25.7008 71.9388 25.4655 66.944 21.1101L64.1124 18.6409C63.3334 19.2762 62.6123 19.9794 61.9576 20.7422L60.4502 19.4278C61.346 18.4005 62.2464 17.5444 63.1637 16.8424C63.8408 15.716 64.908 14.3167 66.3652 12.6445C69.9951 8.48188 76.3117 8.04999 80.4744 11.6798C81.9818 12.9943 82.832 15.0624 86.504 16.9376ZM79.1599 13.1872C77.5608 11.7928 75.4732 11.0907 73.3564 11.2354C71.2396 11.3802 69.267 12.3598 67.8726 13.959C67.6347 14.2318 67.408 14.4968 67.1927 14.7539C69.4378 14.0873 71.8496 14.1166 74.5631 14.6611L74.1698 16.6214C70.9462 15.9758 68.3002 16.1283 65.8286 17.4838L68.2585 19.6027C72.7919 23.5559 78.3093 23.0957 83.4249 17.421C82.3034 16.6196 81.3983 15.7175 80.3678 14.5059C79.6148 13.6197 79.4622 13.4508 79.1599 13.1872Z" fill="#3DDC97"/>
-</g>
-<line x1="0.00869532" y1="67" x2="118.008" y2="68.0261" stroke="#3DDC97" stroke-width="2"/>
-<defs>
-<clipPath id="clip0_10_47">
-<rect width="24" height="24" fill="white" transform="translate(72.6496 0.876144) rotate(41.0886)"/>
-</clipPath>
-</defs>
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradiente para el círculo izquierdo (claro en la derecha, oscuro a la izquierda) -->
+    <linearGradient id="gradLeft" x1="100%" y1="0%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#00D2FF"/> <!-- turquesa brillante (zona interior) -->
+      <stop offset="100%" stop-color="#3A7BD5"/> <!-- azul medio (zona exterior) -->
+    </linearGradient>
+
+    <!-- Gradiente para el círculo derecho (claro en la izquierda, oscuro a la derecha) -->
+    <linearGradient id="gradRight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00D2FF"/> <!-- turquesa brillante (zona interior) -->
+      <stop offset="100%" stop-color="#3A7BD5"/> <!-- azul medio (zona exterior) -->
+    </linearGradient>
+  </defs>
+
+  <circle cx="110" cy="150" r="70" stroke="url(#gradLeft)" stroke-width="12" fill="none"/>
+  <circle cx="190" cy="150" r="70" stroke="url(#gradRight)" stroke-width="12" fill="none"/>
 </svg>

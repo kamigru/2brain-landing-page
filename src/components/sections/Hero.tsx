@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
             <div className="text-center pt-12 md:pt-16 max-w-6xl mx-auto">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl md:leading-tight max-w-4xl mx-auto whitespace-pre-line font-dm-sans leading-tight text-white mb-6">
                     Inteligente, Seguro, Simple{' '}
-                    <span className="bg-gradient-to-r from-[#4c1d95] to-[#5b21b6] bg-clip-text text-transparent">
+                    <span className="bg-gradient-to-r from-[#3A7AD4] to-[#5B21B6] bg-clip-text text-transparent">
                         Gestión de Objetivos
                     </span>
                 </h1>
@@ -32,11 +32,11 @@ const Hero: React.FC = () => {
                 
                 {/* App Store Buttons */}
                 <div className="mt-8 md:mt-10 flex flex-col sm:flex-row gap-4 items-center justify-center">
-                    <button className="flex items-center gap-3 bg-[#4c1d95] hover:bg-[#3730a3] text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl">
+                    <button className="flex items-center gap-3 bg-[#3A7AD4] hover:bg-[#2c5aa0] text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl">
                         <span className="text-2xl">📱</span>
                         <span>App Store</span>
                     </button>
-                    <button className="flex items-center gap-3 bg-[#0891b2] hover:bg-[#0e7490] text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl">
+                    <button className="flex items-center gap-3 bg-[#00A6C7] hover:bg-[#0088a3] text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl">
                         <span className="text-2xl">🤖</span>
                         <span>Google Play</span>
                     </button>
@@ -66,14 +66,14 @@ const Hero: React.FC = () => {
                             <div className="flex-1 flex flex-col justify-center">
                                 <div className="bg-gray-800 rounded-xl p-4 mb-4">
                                     <div className="flex items-center gap-3 mb-2">
-                                        <div className="w-6 h-6 bg-[#4c1d95] rounded flex items-center justify-center">
+                                        <div className="w-6 h-6 bg-[#5B21B6] rounded flex items-center justify-center">
                                             <span className="text-white text-xs">📋</span>
                                         </div>
                                         <span className="text-white font-medium">Objetivo del día</span>
                                     </div>
                                     <p className="text-gray-300 text-sm">Completar propuesta de proyecto</p>
                                     <div className="w-full bg-gray-700 rounded-full h-2 mt-3">
-                                        <div className="bg-[#4c1d95] h-2 rounded-full w-3/4"></div>
+                                        <div className="bg-[#5B21B6] h-2 rounded-full w-3/4"></div>
                                     </div>
                                 </div>
                             </div>
@@ -81,7 +81,7 @@ const Hero: React.FC = () => {
                     </div>
 
                     {/* Floating elements */}
-                    <div className="absolute -top-6 -right-6 w-12 h-12 bg-[#4c1d95]/20 rounded-full animate-pulse"></div>
+                    <div className="absolute -top-6 -right-6 w-12 h-12 bg-[#3A7AD4]/20 rounded-full animate-pulse"></div>
                 </div>
             </div>
         </section>
