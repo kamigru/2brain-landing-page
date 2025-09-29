@@ -1,0 +1,18 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradiente para el círculo izquierdo (claro en la derecha, oscuro a la izquierda) -->
+    <linearGradient id="gradLeft" x1="100%" y1="0%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#00D2FF"/> <!-- turquesa brillante (zona interior) -->
+      <stop offset="100%" stop-color="#3A7BD5"/> <!-- azul medio (zona exterior) -->
+    </linearGradient>
+
+    <!-- Gradiente para el círculo derecho (claro en la izquierda, oscuro a la derecha) -->
+    <linearGradient id="gradRight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00D2FF"/> <!-- turquesa brillante (zona interior) -->
+      <stop offset="100%" stop-color="#3A7BD5"/> <!-- azul medio (zona exterior) -->
+    </linearGradient>
+  </defs>
+
+  <circle cx="110" cy="150" r="70" stroke="url(#gradLeft)" stroke-width="12" fill="none"/>
+  <circle cx="190" cy="150" r="70" stroke="url(#gradRight)" stroke-width="12" fill="none"/>
+</svg>

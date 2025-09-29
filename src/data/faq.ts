@@ -7,8 +7,8 @@ export const faqs: IFAQ[] = [
         answer: 'Absolutamente. Nuestro diseño es "privacidad por defecto": cero recolección de datos personales, nunca compartimos información y todo se procesa localmente en tu dispositivo.',
     },
     {
-        question: `¿Cómo funciona la caja inteligente?`,
-        answer: 'La caja usa sensores discretos y algoritmos de psicología conductual para detectar patrones de impulso. Te ayuda a crear pausas conscientes sin juzgar tus decisiones.',
+        question: `¿Cómo funciona el asistente de IA?`,
+        answer: 'Tu asistente personal de IA utiliza algoritmos avanzados de inteligencia artificial para ofrecerte apoyo personalizado en tiempo real. Te ayuda a alcanzar tus objetivos sin juzgar tus decisiones.',
     },
     {
         question: '¿Está respaldado por ciencia real?',
@@ -16,7 +16,7 @@ export const faqs: IFAQ[] = [
     },
     {
         question: '¿Tengo que dejar todo de golpe?',
-        answer: 'Para nada. zenbox no impone abstinencia. Trabajamos en reducir gradualmente la frecuencia del impulso, respetando tu ritmo y sin presiones.',
+        answer: 'Para nada. 2Brain no impone cambios drásticos. Trabajamos contigo para crear hábitos saludables gradualmente, respetando tu ritmo y sin presiones.',
     },
     {
         question: '¿Qué pasa si necesito ayuda?',

@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface ZenboxButtonProps {
+interface TwoBrainButtonProps {
     text?: string;
     className?: string;
     onClick?: () => void;
@@ -8,7 +8,7 @@ interface ZenboxButtonProps {
     size?: 'sm' | 'md' | 'lg';
 }
 
-const ZenboxButton: React.FC<ZenboxButtonProps> = ({ 
+const TwoBrainButton: React.FC<TwoBrainButtonProps> = ({ 
     text = "Empieza tu plan", 
     className = "",
     onClick,
@@ -65,4 +65,4 @@ const ZenboxButton: React.FC<ZenboxButtonProps> = ({
     );
 };
 
-export default ZenboxButton; 
+export default TwoBrainButton; 

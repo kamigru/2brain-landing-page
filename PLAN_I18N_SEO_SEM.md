@@ -170,8 +170,8 @@ export async function generateMetadata({ params: { locale } }) {
     openGraph: {
       title: t('title'),
       description: t('description'),
-      url: `https://zenbox.com/${locale}`,
-      siteName: 'zenbox',
+      url: `https://2brain.com/${locale}`,
+      siteName: '2brain',
       images: [
         {
           url: '/images/og-image.jpg',
@@ -215,13 +215,13 @@ import { routing } from '@/i18n/routing';
 export default function sitemap(): MetadataRoute.Sitemap {
   return routing.locales.flatMap((locale) => [
     {
-      url: `https://zenbox.com/${locale}`,
+      url: `https://2brain.com/${locale}`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 1,
       alternates: {
         languages: Object.fromEntries(
-          routing.locales.map((l) => [l, `https://zenbox.com/${l}`])
+          routing.locales.map((l) => [l, `https://2brain.com/${l}`])
         )
       }
     }
@@ -236,7 +236,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 // messages/es.json
 {
   "metadata": {
-    "title": "zenbox - Transforma el impulso en autocontrol medible",
+    "title": "2Brain - Transforma el impulso en autocontrol medible",
     "description": "La primera caja inteligente con app, basada en ciencia conductual, para gestionar hábitos con total privacidad y sin juicios.",
     "keywords": "autocontrol, hábitos, privacidad, psicología conductual, caja inteligente"
   }
@@ -245,7 +245,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 // messages/en.json
 {
   "metadata": {
-    "title": "zenbox - Transform impulse into measurable self-control",
+    "title": "2brain - Transform impulse into measurable self-control",
     "description": "The first smart box with app, based on behavioral science, to manage habits with total privacy and no judgment.",
     "keywords": "self-control, habits, privacy, behavioral psychology, smart box"
   }
@@ -263,12 +263,12 @@ export default function StructuredData({ locale }: { locale: string }) {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Product",
-    "name": "zenbox",
+    "name": "2brain",
     "description": t('description'),
-    "url": `https://zenbox.com/${locale}`,
+    "url": `https://2brain.com/${locale}`,
     "brand": {
       "@type": "Brand",
-      "name": "zenbox"
+      "name": "2brain"
     }
   };
 

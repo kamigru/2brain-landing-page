@@ -3,19 +3,36 @@
 @tailwind utilities;
 
 :root {
+  /* Modo Oscuro - Variables para 2Brain App */
+  --background: #1a1a1a;          /* Fondo principal negro como antes */
+  --foreground: #ffffff;          /* Texto principal blanco */
+  --muted: #a1a1aa;               /* Texto secundario más claro */
+  --border: #404040;              /* Bordes más claros para contraste */
+  --card: #2d2d2d;                /* Tarjetas más claras para contraste */
+  --card-foreground: #fafafa;     /* Texto en tarjetas */
 
-  --background: #f1e0e9;          /* Fondo principal de la app */
-  --surface: #fffdf6;             /* Tarjetas y contenedores */
-  --surface-soft: #e2c9d5;        /* Fondos suaves/secundarios */
-  
-  --primary: #30938b;             /* Color principal de marca */
-  --primary-hover: #25746d;       /* Hover del color principal */
-  
-  --text: #000000;                /* Texto principal */
-  --text-muted: #b87a98;          /* Texto secundario/suave */
-  --text-strong: #1f4746;         /* Texto destacado/fuerte */
-  
-  --accent: #a6597e;              /* Iconos y elementos decorativos */
+  /* Colores de marca para autoayuda con IA */
+  --primary: #4c1d95;             /* Violeta principal muy oscuro - IA */
+  --primary-hover: #3730a3;       /* Hover violeta muy oscuro */
+  --primary-light: #5b21b6;       /* Violeta claro oscuro */
+
+  --secondary: #0891b2;           /* Cyan más oscuro - Productividad */
+  --secondary-hover: #0e7490;     /* Hover cyan más oscuro */
+
+  --accent: #5b21b6;              /* Violeta claro - Destacados/CTA */
+  --accent-hover: #4c1d95;        /* Hover violeta oscuro */
+
+  /* Gradientes para efectos */
+  --gradient-primary: linear-gradient(135deg, #4c1d95 0%, #5b21b6 100%);
+  --gradient-secondary: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);
+  --gradient-accent: linear-gradient(135deg, #5b21b6 0%, #4c1d95 100%);
+
+  /* Variables compatibles con el diseño actual */
+  --text: var(--foreground);
+  --text-muted: var(--muted);
+  --text-strong: var(--primary);
+  --surface: var(--card);
+  --surface-soft: #3a3a3a;
 }
 
 html {
@@ -24,8 +41,8 @@ html {
 
 body {
   @apply text-lg leading-relaxed;
-  
-  color: var(--text);
+
+  color: var(--foreground);
   background: var(--background);
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -33,10 +50,15 @@ body {
   line-height: 1.7;
 }
 
+.dark {
+  color-scheme: dark;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+
 }
 
 /* Animaciones personalizadas */
@@ -50,6 +72,7 @@ body {
     transform: translateY(0);
   }
 }
+
 
 @keyframes slideInScale {
   from {
@@ -195,80 +218,82 @@ p.emphasis {
 @layer utilities {
   /* Colores de texto con jerarquía clara */
   .text-primary {
-    color: var(--text); /* Negro - Más importante */
+    color: var(--text); /* Blanco - Más importante */
   }
-  
+
   .text-secondary {
-    color: var(--text-muted); /* Gris malva - Menos importante */
+    color: var(--text-muted); /* Gris - Menos importante */
   }
 
   .text-secondary-accent {
-    color: var(--accent); /* Rosa - Menos importante */
+    color: var(--accent); /* Amber - Menos importante */
   }
-  
+
   .text-accent {
-    color: var(--primary); /* Verde teal - Interactivo */
+    color: var(--primary); /* Violeta - Interactivo */
   }
-  
+
   .text-emphasis {
-    color: var(--text-strong); /* Verde oscuro - Destacar */
+    color: var(--text-strong); /* Violeta - Destacar */
   }
-  
+
   /* Fondos */
   .bg-surface {
     background-color: var(--surface);
   }
-  
+
   .bg-surface-secondary {
     background-color: var(--surface-soft);
   }
-  
+
   .bg-surface-accent {
     background-color: var(--accent);
   }
-  
+
   /* Utilidades de tipografía semánticas */
   .text-readable {
     line-height: 1.7;
     color: var(--text);
   }
-  
+
   .text-readable-secondary {
     line-height: 1.6;
     color: var(--text-muted);
     font-weight: 500;
   }
-  
+
   .text-interactive {
     color: var(--primary);
     font-weight: 600;
   }
-  
+
   .text-highlight {
     color: var(--text-strong);
     font-weight: 600;
   }
-  
-  /* Efectos glass */
+
+  /* Efectos glass mejorados para el header */
   .glass-effect {
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(26, 26, 26, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
-  
+
   .glass-effect-dark {
-    background: rgba(39, 90, 88, 0.25);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(126, 171, 166, 0.18);
+    background: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(76, 29, 149, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
-  
+
   /* Animaciones */
   .animate-float {
     animation: gentleFloat 3s ease-in-out infinite;
   }
-  
+
   .animate-shimmer {
     background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
     background-size: 200% 100%;
@@ -286,10 +311,6 @@ p.emphasis {
   }
 }
 
-/* #logos svg {
-  @apply w-fit h-10 sm:h-12;
-} */
-
 .benefit-section:last-of-type > div {
   @apply mb-10 border-b-0;
 }
@@ -305,12 +326,12 @@ p.emphasis {
     @apply text-3xl leading-tight;
     letter-spacing: -0.02em;
   }
-  
+
   h2 {
     @apply text-2xl leading-tight;
     letter-spacing: -0.015em;
   }
-  
+
   h3 {
     @apply text-xl leading-tight;
     letter-spacing: -0.01em;
@@ -322,7 +343,7 @@ p.emphasis {
   }
 
   /* Optimizar botones para móvil */
-  button, 
+  button,
   .btn,
   a[class*="bg-primary"],
   a[class*="bg-accent"] {
@@ -365,7 +386,7 @@ p.emphasis {
   h1 {
     @apply text-2xl;
   }
-  
+
   h2 {
     @apply text-xl;
   }
@@ -407,4 +428,50 @@ p.emphasis {
   }
 }
 
-/* Los colores se mantienen consistentes independientemente del modo del sistema */
+/* Header moderno con mejor legibilidad y sin borde blanco */
+header {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: background-color, backdrop-filter;
+}
+
+/* Mejoras de contraste para navegación */
+nav a {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Efecto hover con línea morada para header links */
+.header-link {
+  position: relative;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom-color 0.3s ease-in-out;
+  background: linear-gradient(to right, var(--primary) 0%, var(--primary) 100%) no-repeat;
+  background-size: 0% 2px;
+  background-position: left bottom;
+}
+
+.header-link:hover {
+  background-size: 100% 2px;
+  transition: background-size 0.3s ease-in-out;
+}
+
+/* Logo con mejor contraste */
+.logo-container {
+  background: rgba(45, 45, 45, 0.9);
+  border: 1px solid rgba(64, 64, 64, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Botón CTA mejorado */
+.cta-button {
+  background: linear-gradient(135deg, var(--primary) 0%, #5b21b6 100%);
+  box-shadow: 0 4px 14px 0 rgba(76, 29, 149, 0.25);
+  border: 1px solid rgba(76, 29, 149, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cta-button:hover {
+  box-shadow: 0 8px 25px 0 rgba(76, 29, 149, 0.35);
+  transform: translateY(-1px) scale(1.02);
+}

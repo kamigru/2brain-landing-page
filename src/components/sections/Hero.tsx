@@ -19,54 +19,69 @@ const Hero: React.FC = () => {
                 </div>
             </div>
 
-            <div className="text-center pt-12 md:pt-16 max-w-4xl mx-auto">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl md:leading-tight max-w-lg md:max-w-2xl mx-auto whitespace-pre-line font-dm-sans leading-tight" style={{ color: 'var(--text-strong)' }}>
-                    {heroDetails.heading}
+            <div className="text-center pt-12 md:pt-16 max-w-6xl mx-auto">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl md:leading-tight max-w-4xl mx-auto whitespace-pre-line font-dm-sans leading-tight text-white mb-6">
+                    Inteligente, Seguro, Simple{' '}
+                    <span className="bg-gradient-to-r from-[#4c1d95] to-[#5b21b6] bg-clip-text text-transparent">
+                        Gestión de Objetivos
+                    </span>
                 </h1>
-                <p className="mt-6 md:mt-8 text-text-emphasis max-w-lg md:max-w-xl mx-auto text-lg md:text-xl leading-relaxed px-2">
+                <p className="mt-6 md:mt-8 text-gray-300 max-w-2xl mx-auto text-lg md:text-xl leading-relaxed px-2">
                     {heroDetails.subheading}
                 </p>
                 
-                {/* CTA Principal móvil */}
-                <div className="mt-8 md:mt-10">
-                    <Link 
-                        href="#cta" 
-                        className="inline-block bg-primary hover:bg-primary-hover text-white font-bold px-12 py-5 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl active:scale-95 text-xl md:text-2xl"
-                    >
-                        Empieza tu plan
-                    </Link>
-                </div>
-
                 {/* App Store Buttons */}
                 <div className="mt-8 md:mt-10 flex flex-col sm:flex-row gap-4 items-center justify-center">
-                    <AppStoreButton dark={true} />
-                    <PlayStoreButton dark={true} />
+                    <button className="flex items-center gap-3 bg-[#4c1d95] hover:bg-[#3730a3] text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl">
+                        <span className="text-2xl">📱</span>
+                        <span>App Store</span>
+                    </button>
+                    <button className="flex items-center gap-3 bg-[#0891b2] hover:bg-[#0e7490] text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl">
+                        <span className="text-2xl">🤖</span>
+                        <span>Google Play</span>
+                    </button>
                 </div>
                 
                 <div className="mt-6 md:mt-8">
-                    <p className="text-sm md:text-base text-primary/70 max-w-md mx-auto leading-relaxed">
-                        Privacidad absoluta • Sin juicios • Ciencia validada
+                    <p className="text-sm md:text-base text-white/70 max-w-md mx-auto leading-relaxed">
+                        Confiado por más de 50,000+ usuarios en todo el mundo
                     </p>
                 </div>
                 
-                {/* Hero Image */}
-                <div className="mt-12 md:mt-16 relative">
-                    <Image
-                        src={heroDetails.centerImageSrc}
-                        width={384}
-                        height={340}
-                        quality={85}
-                        sizes="(max-width: 768px) 320px, (max-width: 1024px) 400px, 450px"
-                        priority={true}
-                        alt="zenbox - Caja inteligente para control de impulsos"
-                        className='relative mx-auto z-10 max-w-[320px] md:max-w-[400px] lg:max-w-[450px] w-full h-auto'
-                        placeholder="blur"
-                        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8A0XqN0qp1Htqm5+7fE/VKgMJWQZR7dYrn3s02KakLLKsLkI+d4OQPN0KABEAgMfLMHFWJ9CgdEagWsUPQNy2ZPmJWYWq8GWXKuQ7LfKaQSWtY7K9Vt4x9YrpQAWHKk5YCNiJQ/9k="
-                    />
-                    
-                    {/* Floating elements for visual interest */}
-                    <div className="absolute -top-6 -right-6 md:-top-8 md:-right-8 w-10 h-10 md:w-16 md:h-16 bg-accent/20 rounded-full animate-pulse"></div>
-                    <div className="absolute -bottom-6 -left-6 md:-bottom-8 md:-left-8 w-8 h-8 md:w-12 md:h-12 bg-secondary/30 rounded-full animate-bounce"></div>
+                {/* Hero Mockup */}
+                <div className="mt-12 md:mt-16 relative max-w-sm mx-auto">
+                    {/* Phone mockup container */}
+                    <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-[2.5rem] p-2 shadow-2xl">
+                        {/* Phone screen */}
+                        <div className="bg-[#1a1a1a] rounded-[2rem] p-6 h-[500px] flex flex-col">
+                            {/* Status bar */}
+                            <div className="flex items-center justify-center mb-6">
+                                <div className="flex items-center gap-2">
+                                    <div className="w-4 h-4 rounded-full bg-blue-500"></div>
+                                    <span className="text-[#00d2ff] text-lg font-semibold">2Brain</span>
+                                </div>
+                            </div>
+
+                            {/* Main content */}
+                            <div className="flex-1 flex flex-col justify-center">
+                                <div className="bg-gray-800 rounded-xl p-4 mb-4">
+                                    <div className="flex items-center gap-3 mb-2">
+                                        <div className="w-6 h-6 bg-[#4c1d95] rounded flex items-center justify-center">
+                                            <span className="text-white text-xs">📋</span>
+                                        </div>
+                                        <span className="text-white font-medium">Objetivo del día</span>
+                                    </div>
+                                    <p className="text-gray-300 text-sm">Completar propuesta de proyecto</p>
+                                    <div className="w-full bg-gray-700 rounded-full h-2 mt-3">
+                                        <div className="bg-[#4c1d95] h-2 rounded-full w-3/4"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Floating elements */}
+                    <div className="absolute -top-6 -right-6 w-12 h-12 bg-[#4c1d95]/20 rounded-full animate-pulse"></div>
                 </div>
             </div>
         </section>

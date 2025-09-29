@@ -1,6 +1,6 @@
 # Palabras específicas del proyecto
 # Nombres de marca y productos
-Zenbox
+2Brain
 thebox
 
 # Librerías y tecnologías

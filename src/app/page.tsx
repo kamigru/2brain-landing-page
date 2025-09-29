@@ -7,6 +7,7 @@ import { lazy } from "react";
 // Lazy load de los componentes pesados
 const Benefits = lazy(() => import("@/components/Benefits/Benefits"));
 const Testimonials = lazy(() => import("@/components/sections/Testimonials"));
+const FanImages = lazy(() => import("@/components/sections/FanImages"));
 const FAQ = lazy(() => import("@/components/sections/FAQ"));
 const Stats = lazy(() => import("@/components/sections/Stats"));
 const CTA = lazy(() => import("@/components/sections/CTA"));
@@ -24,6 +25,11 @@ const HomePage: React.FC = () => {
           <Container>
             <Benefits />
           </Container>
+        </LazySection>
+
+        {/* Sección FanImages con lazy loading - Todo el ancho */}
+        <LazySection delay={150}>
+          <FanImages />
         </LazySection>
 
         {/* Sección Confianza con lazy loading */}

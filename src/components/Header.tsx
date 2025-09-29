@@ -4,7 +4,6 @@ import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { Transition } from '@headlessui/react';
 import { HiOutlineXMark } from 'react-icons/hi2';
-import { FaBox } from 'react-icons/fa';
 
 import Container from './layout/Container';
 import { siteDetails } from '@/data/siteDetails';
@@ -43,17 +42,30 @@ const Header: React.FC = () => {
     return (
         <header className="bg-transparent sticky top-0 left-0 right-0 z-50 w-full flex justify-center">
             <Container className="!px-0">
-                <nav className={`mx-auto flex justify-between items-center transition-all duration-300 ${
-                    isScrolled 
-                        ? 'bg-white/20 backdrop-blur-lg shadow-lg rounded-2xl mx-4 mt-4 border border-white/30 py-2 px-4 md:py-4' 
-                        : 'shadow-none bg-transparent py-3 px-5 md:py-6'
+                <nav className={`mx-auto flex justify-between items-center py-2 px-5 md:py-6 transition-all duration-300 ${
+                    isScrolled
+                        ? 'bg-white/20 backdrop-blur-xl shadow-lg rounded-2xl mx-4 mt-4'
+                        : 'shadow-none bg-transparent'
                 }`}>
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-2">
-                        <FaBox className={`min-w-fit transition-all duration-300 ${
+                        <svg className={`min-w-fit transition-all duration-300 ${
                             isScrolled ? 'w-6 h-6 md:w-7 md:h-7' : 'w-7 h-7 md:w-8 md:h-8'
-                        }`} style={{ color: 'var(--text-strong)' }} />
-                        <span className={`font-semibold text-foreground cursor-pointer transition-all duration-300 ${
+                        }`} viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="gradLeft" x1="100%" y1="0%" x2="0%" y2="0%">
+                                    <stop offset="0%" stopColor="#00D2FF"/>
+                                    <stop offset="100%" stopColor="#3A7BD5"/>
+                                </linearGradient>
+                                <linearGradient id="gradRight" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" stopColor="#00D2FF"/>
+                                    <stop offset="100%" stopColor="#3A7BD5"/>
+                                </linearGradient>
+                            </defs>
+                            <circle cx="110" cy="150" r="70" stroke="url(#gradLeft)" strokeWidth="12" fill="none"/>
+                            <circle cx="190" cy="150" r="70" stroke="url(#gradRight)" strokeWidth="12" fill="none"/>
+                        </svg>
+                        <span className={`font-semibold cursor-pointer transition-all duration-300 text-white ${
                             isScrolled ? 'text-xl md:text-xl' : 'text-xl md:text-2xl'
                         }`}>
                             {siteDetails.siteName}
@@ -63,9 +75,9 @@ const Header: React.FC = () => {
                     <ul className="hidden md:flex space-x-6">
                         {menuItems.map(item => (
                             <li key={item.text}>
-                                <Link href={item.url} className={`font-bold hover:scale-105 transition-all duration-300 ${
+                                <Link href={item.url} className={`header-link relative font-bold text-white transition-all duration-300 ${
                                     isScrolled ? 'text-base' : 'text-base'
-                                }`} style={{ color: 'var(--text-strong)' }} onMouseEnter={(e) => e.currentTarget.style.color = 'var(--primary-hover)'} onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-strong)'}>
+                                }`}>
                                     {item.text}
                                 </Link>
                             </li>
@@ -111,9 +123,9 @@ const Header: React.FC = () => {
                 leaveFrom="opacity-100 scale-100 translate-y-0"
                 leaveTo="opacity-0 scale-95 translate-y-2"
             >
-                <div 
-                    id="mobile-menu" 
-                    className="md:hidden fixed top-16 left-4 right-4 bg-white/95 backdrop-blur-lg shadow-xl rounded-2xl border border-white/40 overflow-hidden z-40"
+                <div
+                    id="mobile-menu"
+                    className="md:hidden fixed top-16 left-4 right-4 glass-effect-dark shadow-xl rounded-2xl overflow-hidden z-40"
                 >
                     <ul className="flex flex-col py-4">
                         {menuItems.map((item, index) => (

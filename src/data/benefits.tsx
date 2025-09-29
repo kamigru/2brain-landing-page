@@ -1,11 +1,11 @@
-import { FiEye, FiShield, FiHeart, FiUsers, FiTrendingUp, FiLock, FiCheckCircle, FiTarget } from "react-icons/fi";
+import { FiEye, FiShield, FiHeart, FiUsers, FiTrendingUp, FiLock, FiCheckCircle, FiTarget, FiBrain, FiSmartphone, FiZap } from "react-icons/fi";
 
 import { IBenefit } from "@/types"
 
 export const benefits: IBenefit[] = [
     {
         title: "¿Cansado de soluciones que no funcionan?",
-        description: "Sabemos que has probado muchas 'soluciones milagro' que prometían resultados inmediatos. La realidad es que la mayoría genera más frustración que progreso real. zenbox es diferente.",
+        description: "Sabemos que has probado muchas aplicaciones que prometían cambiar tu vida instantáneamente. La realidad es que la mayoría genera más frustración que progreso real. 2Brain es diferente.",
         bullets: [
             {
                 title: "Sin Falsas Promesas",
@@ -26,8 +26,8 @@ export const benefits: IBenefit[] = [
         imageSrc: "/images/mockup-1.webp"
     },
     {
-        title: "Te presentamos zenbox: Esperanza Responsable",
-        description: "La primera caja inteligente con app que transforma el impulso en autocontrol medible, usando psicología basada en evidencia y respetando tu privacidad absoluta.",
+        title: "Te presentamos 2Brain: Tu Segundo Cerebro de IA",
+        description: "El primer asistente de autoayuda con inteligencia artificial que te acompaña 24/7, usando psicología basada en evidencia y respetando tu privacidad absoluta.",
         bullets: [
             {
                 title: "Progreso Visible",
@@ -49,7 +49,7 @@ export const benefits: IBenefit[] = [
     },
     {
         title: "Diseñado para tu tranquilidad",
-        description: "zenbox está pensado tanto para ti como para quienes te rodean. Una herramienta que ayuda sin confrontar, que apoya sin juzgar.",
+        description: "2Brain está pensado para tu bienestar integral. Una herramienta que te guía sin presionar, que apoya tu crecimiento personal de forma natural.",
         bullets: [
             {
                 title: "Feedback Constructivo",
@@ -57,8 +57,8 @@ export const benefits: IBenefit[] = [
                 icon: <FiHeart size={26} style={{ color: 'var(--accent)' }} />
             },
             {
-                title: "Fácil para Cuidadores",
-                description: "Ayuda sin confrontación para quienes te rodean. Claridad de uso y respeto total.",
+                title: "Accesible y Fácil",
+                description: "Interfaz intuitiva que se adapta a tu ritmo. Disponible cuando lo necesites, sin complicaciones.",
                 icon: <FiUsers size={26} style={{ color: 'var(--accent)' }} />
             },
             {

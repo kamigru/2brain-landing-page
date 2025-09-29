@@ -10,38 +10,38 @@ const FAQ: React.FC = () => {
         <section id="faq" className="py-8 lg:py-20" style={{ scrollMarginTop: '8rem' }}>
             <div className="flex flex-col lg:flex-row gap-8 lg:gap-10">
                 <div className="text-center lg:text-left">
-                    <SectionTitle style={{ color: 'var(--primary)' }}>
-                        <h2 className="my-3 !leading-snug lg:max-w-sm text-2xl md:text-3xl lg:text-4xl">Preguntas Frecuentes</h2>
+                    <SectionTitle>
+                        <h2 className="my-3 !leading-snug lg:max-w-sm text-2xl md:text-3xl lg:text-4xl text-white">Preguntas Frecuentes</h2>
                     </SectionTitle>
-                    <p className="mt-4 lg:mt-10 text-accent text-base md:text-lg">
+                    <p className="mt-4 lg:mt-10 text-gray-300 text-base md:text-lg">
                         ¡Pregúntanos lo que necesites!
                     </p>
-                    <a 
-                        href="mailto:contacto@zenbox.com" 
-                        className="mt-3 block text-lg md:text-xl lg:text-4xl text-secondary font-semibold hover:text-secondary-accent transition-colors duration-300 active:scale-95"
+                    <a
+                        href="mailto:contacto@2brain.app"
+                        className="mt-3 block text-lg md:text-xl lg:text-4xl text-[#0891b2] font-semibold hover:text-[#0e7490] transition-colors duration-300 active:scale-95"
                     >
-                        contacto@zenbox.com
+                        contacto@2brain.app
                     </a>
                 </div>
 
-                <div className="w-full lg:max-w-2xl mx-auto border-b border-primary/10">
+                <div className="w-full lg:max-w-2xl mx-auto border-b border-gray-700/30">
                     {faqs.map((faq, index) => (
                         <div key={index} className="mb-4 md:mb-7">
                             <Disclosure>
                                 {({ open }) => (
                                     <div>
-                                        <DisclosureButton className="flex items-center justify-between w-full px-3 md:px-4 py-4 md:pt-7 text-left border-t border-primary/10 hover:bg-primary/5 transition-colors duration-200 rounded-lg">
-                                            <span className="text-lg md:text-2xl font-semibold text-emphasis pr-4 leading-tight">
+                                        <DisclosureButton className="flex items-center justify-between w-full px-3 md:px-4 py-4 md:pt-7 text-left border-t border-gray-700/30 hover:bg-gray-900/20 transition-colors duration-200 rounded-lg">
+                                            <span className="text-lg md:text-2xl font-semibold text-white pr-4 leading-tight">
                                                 {faq.question}
                                             </span>
                                             <div className="flex-shrink-0 ml-4">
-                                                {open ? 
-                                                    <BiMinus className="w-6 h-6 md:w-5 md:h-5" style={{ color: 'var(--accent)' }} /> : 
-                                                    <BiPlus className="w-6 h-6 md:w-5 md:h-5" style={{ color: 'var(--accent)' }} />
+                                                {open ?
+                                                    <BiMinus className="w-6 h-6 md:w-5 md:h-5 text-[#5b21b6]" /> :
+                                                    <BiPlus className="w-6 h-6 md:w-5 md:h-5 text-[#5b21b6]" />
                                                 }
                                             </div>
                                         </DisclosureButton>
-                                        <DisclosurePanel className="px-3 md:px-4 pt-3 md:pt-4 pb-4 text-text-secondary text-base md:text-lg leading-relaxed">
+                                        <DisclosurePanel className="px-3 md:px-4 pt-3 md:pt-4 pb-4 text-gray-300 text-base md:text-lg leading-relaxed">
                                             {faq.answer}
                                         </DisclosurePanel>
                                     </div>

@@ -7,7 +7,7 @@ export const footerDetails: {
     telephone: string;
     socials: ISocials;
 } = {
-    subheading: "Transformando el impulso en autocontrol medible mediante psicología basada en evidencia y privacidad absoluta.",
+    subheading: "Tu asistente personal de autoayuda con inteligencia artificial. Alcanza tus objetivos y mejora tu bienestar con la guía de tu coach de IA disponible 24/7.",
     quickLinks: [
         {
             text: "Características",
@@ -22,16 +22,16 @@ export const footerDetails: {
             url: "#testimonios"
         }
     ],
-    email: 'contacto@zenbox.com',
+    email: 'contacto@2brain.app',
     telephone: '+34 (900) 123-456',
     socials: {
         // github: 'https://github.com',
         // x: 'https://twitter.com/x',
-        twitter: 'https://twitter.com/zenboxOfficial',
-        facebook: 'https://facebook.com/zenboxOfficial',
+        twitter: 'https://twitter.com/2brainapp',
+        facebook: 'https://facebook.com/2brainapp',
         // youtube: 'https://youtube.com',
-        linkedin: 'https://www.linkedin.com/company/zenbox',
+        linkedin: 'https://www.linkedin.com/company/2brain',
         // threads: 'https://www.threads.net',
-        instagram: 'https://www.instagram.com/zenboxofficial',
+        instagram: 'https://www.instagram.com/2brainapp',
     }
 }
