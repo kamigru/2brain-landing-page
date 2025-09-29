@@ -1,9 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-
-import AppStoreButton from '../ui/buttons/AppStoreButton';
-import PlayStoreButton from '../ui/buttons/PlayStoreButton';
 
 import { heroDetails } from '@/data/hero';
 

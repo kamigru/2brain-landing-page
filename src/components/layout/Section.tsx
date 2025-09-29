@@ -19,9 +19,9 @@ const Section: React.FC<React.PropsWithChildren<Props>> = ({
     return (
         <section id={id} className={`py-10 lg:py-40 ${className}`}>
             <SectionTitle style={primaryTitle ? { color: 'var(--primary)' } : {}}>
-                <h2 className="text-center mb-2 text-balance">{title}</h2>
+                <h2 className="text-center mb-2 text-balance text-white">{title}</h2>
             </SectionTitle>
-            <p className="mb-12 text-center max-w-2xl mx-auto text-balance" style={{ color: 'var(--text-strong)' }}>
+            <p className="mb-12 text-center max-w-2xl mx-auto text-balance text-gray-300">
                 {description}
             </p>
             {children}

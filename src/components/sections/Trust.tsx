@@ -46,7 +46,7 @@ const Trust: React.FC = () => {
                     <h4 className="text-xl font-bold mb-4 text-white">
                         {item.title}
                     </h4>
-                    <p className="leading-relaxed" style={{ color: 'var(--primary)' }}>
+                    <p className="leading-relaxed text-gray-300">
                         {item.description}
                     </p>
                     </div>

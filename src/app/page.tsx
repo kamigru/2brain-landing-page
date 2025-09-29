@@ -19,7 +19,7 @@ const HomePage: React.FC = () => {
       {/* Hero se carga inmediatamente */}
       <Hero />
       
-      <div className="bg-surface relative z-20 pb-0">
+      <div className="bg-gradient-to-b from-transparent via-black/10 to-transparent relative z-20 pb-0">
         {/* Benefits con lazy loading */}
         <LazySection delay={100}>
           <Container>
@@ -50,22 +50,28 @@ const HomePage: React.FC = () => {
           </Container>
         </LazySection>
 
-        {/* Sección de testimonios con fondo rosáceo - con lazy loading */}
-        <LazySection className="relative mt-10 lg:mt-16 lg:px-8 mx-4 lg:mx-12" delay={300}>
-          <div className="rounded-3xl opacity-95 absolute inset-0 -z-10 w-full" style={{ backgroundColor: 'var(--background)' }}>
-            <div className="rounded-3xl absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_600px_at_50%_500px,#30938b,transparent)]"></div>
-            <div className="rounded-3xl absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/5"></div>
+        {/* Sección de testimonios - con lazy loading */}
+        <LazySection className="relative mt-10 lg:mt-16" delay={300}>
+          <div className="max-w-[88rem] mx-auto px-4">
+            <div className="relative px-8 md:px-12 py-6 md:py-8 border-2 border-purple-600/50 rounded-2xl overflow-hidden">
+              {/* Fondo con degradado */}
+              <div className="absolute inset-0" style={{
+                background: 'linear-gradient(135deg, var(--primary), var(--accent), var(--accent-light))',
+                opacity: '0.25'
+              }}></div>
+              <div className="absolute inset-0 bg-gray-900/60"></div>
+
+              <div className="relative z-10">
+                <Section
+                  id="testimonios"
+                  title="Historias de autocontrol"
+                  description="Experiencias auténticas de quienes han transformado sus impulsos."
+                >
+                  <Testimonials />
+                </Section>
+              </div>
+            </div>
           </div>
-          <Container>
-            <Section
-              id="testimonios"
-              title="Historias de autocontrol"
-              description="Experiencias auténticas de quienes han transformado sus impulsos."
-              className="text-on-dark py-8 lg:py-12"
-            >
-              <Testimonials />
-            </Section>
-          </Container>
         </LazySection>
 
         {/* FAQ y CTA con lazy loading */}

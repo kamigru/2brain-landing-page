@@ -10,15 +10,15 @@ const Stats: React.FC = () => {
                             {stat.icon}
                             {stat.title}
                         </h3>
-                        <p className="text-white">
+                        <p className="text-gray-300">
                             {stat.title === "60%" && (
-                                <>De usuarios <span style={{ color: 'var(--primary)' }} className="font-semibold">reducen la frecuencia del impulso</span> en 30 días según <span style={{ color: 'var(--primary)' }} className="font-semibold">validación científica</span>.</>
+                                <>De usuarios <span className="font-semibold text-white">reducen la frecuencia del impulso</span> en 30 días según <span className="font-semibold text-white">validación científica</span>.</>
                             )}
                             {stat.title === "100%" && (
-                                <><span style={{ color: 'var(--primary)' }} className="font-semibold">Privacidad garantizada</span>. Cero recolección de datos personales, siempre.</>
+                                <><span className="font-semibold text-white">Privacidad garantizada</span>. Cero recolección de datos personales, siempre.</>
                             )}
                             {stat.title === "20%" && (
-                                <>De nuestros beneficios se destinan a <span style={{ color: 'var(--primary)' }} className="font-semibold">investigación contra adicciones</span>.</>
+                                <>De nuestros beneficios se destinan a <span className="font-semibold text-white">investigación contra adicciones</span>.</>
                             )}
                         </p>
                     </div>

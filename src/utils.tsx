@@ -3,28 +3,28 @@ import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaThreads, FaTwitter, Fa
 export const getPlatformIconByName = (platformName: string): JSX.Element | null => {
     switch (platformName) {
         case 'facebook': {
-            return <FaFacebook size={24} className='min-w-fit' style={{ color: 'var(--text-strong)' }} />;
+            return <FaFacebook size={24} className='min-w-fit text-white' />;
         }
         case 'github': {
-            return <FaGithub size={24} className='min-w-fit' style={{ color: 'var(--text-strong)' }} />;
+            return <FaGithub size={24} className='min-w-fit text-white' />;
         }
         case 'instagram': {
-            return <FaInstagram size={24} className='min-w-fit' style={{ color: 'var(--text-strong)' }} />;
+            return <FaInstagram size={24} className='min-w-fit text-white' />;
         }
         case 'linkedin': {
-            return <FaLinkedin size={24} className='min-w-fit' style={{ color: 'var(--text-strong)' }} />;
+            return <FaLinkedin size={24} className='min-w-fit text-white' />;
         }
         case 'threads': {
-            return <FaThreads size={24} className='min-w-fit' style={{ color: 'var(--text-strong)' }} />;
+            return <FaThreads size={24} className='min-w-fit text-white' />;
         }
         case 'twitter': {
-            return <FaTwitter size={24} className='min-w-fit' style={{ color: 'var(--text-strong)' }} />;
-        } 
+            return <FaTwitter size={24} className='min-w-fit text-white' />;
+        }
         case 'youtube': {
-            return <FaYoutube size={24} className='min-w-fit' style={{ color: 'var(--text-strong)' }} />;
+            return <FaYoutube size={24} className='min-w-fit text-white' />;
         }
         case 'x': {
-            return <FaXTwitter size={24} className='min-w-fit' style={{ color: 'var(--text-strong)' }} />;
+            return <FaXTwitter size={24} className='min-w-fit text-white' />;
         }
         default:
             console.log('Platform name not supported, no icon is returned:', platformName);

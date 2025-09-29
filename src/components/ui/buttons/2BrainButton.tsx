@@ -18,20 +18,24 @@ const TwoBrainButton: React.FC<TwoBrainButtonProps> = ({
     // Estilos base según variante
     const variantStyles = {
         primary: `
-            bg-gradient-to-r from-primary via-accent to-primary-light
-            hover:from-primary-hover hover:via-accent-hover hover:to-primary
-            text-white font-bold shadow-lg shadow-primary/25 hover:shadow-primary/40
-            border border-primary/30 hover:border-primary/50
+            bg-gradient-to-r from-blue-400 via-purple-600 to-blue-800
+            text-white font-semibold
+            border border-white/20
             relative overflow-hidden
         `,
         secondary: `
-            bg-secondary hover:bg-secondary-hover
+            bg-transparent
             text-white font-semibold
-            border border-gray-600/50
+            border border-transparent bg-clip-padding
+            relative
+            before:absolute before:inset-0 before:p-[1px] before:bg-gradient-to-r before:from-blue-400 before:via-purple-600 before:to-blue-800 before:rounded-xl before:-z-10
+            after:absolute after:inset-[1px] after:bg-gray-900/95 after:rounded-[calc(0.75rem-1px)] after:-z-10
         `,
         accent: `
-            bg-accent hover:bg-accent-hover
+            bg-gradient-to-r from-blue-400 via-purple-600 to-blue-800
             text-white font-semibold
+            border border-white/20
+            relative overflow-hidden
         `
     };
 
@@ -50,10 +54,10 @@ const TwoBrainButton: React.FC<TwoBrainButtonProps> = ({
                 ${sizeStyles[size]}
                 ${variantStyles[variant]}
                 rounded-xl
-                transition-all duration-200 ease-out
-                transform hover:scale-105 active:scale-95
+                transition-transform duration-200 ease-out
+                hover:scale-105
                 focus:outline-none
-                disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none
+                disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100
                 ${className}
             `}
         >

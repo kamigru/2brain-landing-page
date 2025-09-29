@@ -13,6 +13,7 @@ const Header: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const [navHeight, setNavHeight] = useState(0);
+    const [navWidth, setNavWidth] = useState(0);
     const navRef = useRef<HTMLElement>(null);
 
     const toggleMenu = () => {
@@ -34,13 +35,15 @@ const Header: React.FC = () => {
         const updateNavHeight = () => {
             if (navRef.current) {
                 const height = navRef.current.offsetHeight;
+                const width = navRef.current.offsetWidth;
                 setNavHeight(height);
+                setNavWidth(width);
             }
         };
 
         if (isScrolled) {
             // Esperar a que termine la transición antes de medir
-            const timer = setTimeout(updateNavHeight, 100);
+            const timer = setTimeout(updateNavHeight, 500);
             return () => clearTimeout(timer);
         } else {
             updateNavHeight();
@@ -52,6 +55,7 @@ const Header: React.FC = () => {
         const handleResize = () => {
             if (navRef.current && isScrolled) {
                 setNavHeight(navRef.current.offsetHeight);
+                setNavWidth(navRef.current.offsetWidth);
             }
         };
 
@@ -118,10 +122,10 @@ const Header: React.FC = () => {
                             </li>
                         ))}
                         <li>
-                            <Link href="#cta" className={`text-white bg-primary hover:bg-primary-hover rounded-full transition-all duration-500 ease-in-out font-semibold ${
+                            <Link href="#cta" className={`text-white bg-gradient-to-r from-blue-400 via-purple-600 to-blue-800 rounded-full transition-transform duration-200 ease-out font-semibold border border-white/20 hover:scale-105 ${
                                 isScrolled ? 'px-7 py-2.5 text-base' : 'px-8 py-3 text-base'
                             }`}>
-                                Empieza tu plan
+                                Descargar
                             </Link>
                         </li>
                     </ul>
@@ -181,12 +185,12 @@ const Header: React.FC = () => {
                             </li>
                         ))}
                         <li className="px-6 pt-4">
-                            <Link 
-                                href="#cta" 
-                                className="text-white px-6 py-3 rounded-full block text-center font-semibold bg-primary hover:bg-primary-hover transition-all duration-200" 
+                            <Link
+                                href="#cta"
+                                className="text-white px-6 py-3 rounded-full block text-center font-semibold bg-gradient-to-r from-blue-400 via-purple-600 to-blue-800 border border-white/20 hover:scale-105 transition-transform duration-200 ease-out"
                                 onClick={toggleMenu}
                             >
-                                Empieza tu plan
+                                Descargar
                             </Link>
                         </li>
                     </ul>
@@ -194,13 +198,15 @@ const Header: React.FC = () => {
             </Transition>
             </header>
             {/* Efecto difuminado para el contenido - misma altura y posición que el nav */}
-            <div className={`fixed z-40 pointer-events-none transition-all duration-500 ease-in-out rounded-2xl ${
+            <div className={`fixed z-40 pointer-events-none transition-all duration-500 ease-in-out ${
                 isScrolled ? 'opacity-100' : 'opacity-0'
             }`} style={{
                 top: isScrolled ? '16px' : '0', // mt-4 = 16px
-                left: isScrolled ? '16px' : '0', // mx-4 = 16px left
-                right: isScrolled ? '16px' : '0', // mx-4 = 16px right
+                left: '50%',
+                transform: 'translateX(-50%)',
+                width: isScrolled ? `${navWidth}px` : '100%',
                 height: isScrolled ? `${navHeight}px` : '0',
+                borderRadius: isScrolled ? '1rem' : '0', // rounded-2xl = 1rem
                 backdropFilter: 'blur(8px)',
                 WebkitBackdropFilter: 'blur(8px)',
             }}>

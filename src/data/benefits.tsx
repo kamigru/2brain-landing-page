@@ -1,4 +1,4 @@
-import { FiEye, FiShield, FiHeart, FiUsers, FiTrendingUp, FiLock, FiCheckCircle, FiTarget, FiBrain, FiSmartphone, FiZap } from "react-icons/fi";
+import { FiEye, FiShield, FiHeart, FiUsers, FiTrendingUp, FiLock, FiCheckCircle, FiTarget } from "react-icons/fi";
 
 import { IBenefit } from "@/types"
 
